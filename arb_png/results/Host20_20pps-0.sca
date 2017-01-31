@@ -1,0 +1,4883 @@
+version 2
+run Host20_20pps-0-20161107-11:46:12-5180
+attr configname Host20_20pps
+attr datetime 20161107-11:46:12
+attr experiment Host20_20pps
+attr inifile omnetpp_20.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network arb_png.car_host_20
+attr processid 5180
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.aodv.activeRouteTimeout 2s
+param *.configurator.addStaticRoutes false
+param *.configurator.config "xml(\"<config><interface hosts='**' address='10.0.0.x' netmask='255.255.255.0'/><autoroute metric='errorRate'/></config>\")"
+param *.configurator.optimizeRoutes true
+param *.host*.**.bitrate 1Mbps
+param *.host*.networkLayer.arpType "\"GlobalARP\""
+param *.host*.routingTable.netmaskRoutes "\"\""
+param *.host*.wlan[0].mac.maxQueueSize 15
+param *.host*.wlan[0].mac.useAck false
+param *.host*.wlan[0].macType "\"CsmaCaMac\""
+param *.host*.wlan[0].radio.bandwidth 2MHz
+param *.host*.wlan[0].radio.carrierFrequency 2GHz
+param *.host*.wlan[0].radio.displayCommunicationRange true
+param *.host*.wlan[0].radio.displayInterferenceRange true
+param *.host*.wlan[0].radio.receiver.energyDetection -85dBm
+param *.host*.wlan[0].radio.receiver.ignoreInterference false
+param *.host*.wlan[0].radio.receiver.sensitivity -85dBm
+param *.host*.wlan[0].radio.receiver.snirThreshold 4dB
+param *.host*.wlan[0].radio.transmitter.communicationRange 200m
+param *.host*.wlan[0].radio.transmitter.headerBitLength 0b
+param *.host*.wlan[0].radio.transmitter.power 1.4mW
+param *.host*.wlan[0].radio.transmitter.preambleDuration 10us
+param *.host*.wlan[0].radioType "\"APSKScalarRadio\""
+param *.host*.wlan[0].typename "\"WirelessNic\""
+param *.hostA.numUdpApps 1
+param *.hostA.udpApp[0].destAddresses "\"hostD\""
+param *.hostA.udpApp[0].destPort 5000
+param *.hostA.udpApp[0].messageLength 1000B
+param *.hostA.udpApp[0].packetName "\"Data\""
+param *.hostA.udpApp[0].sendInterval 50ms
+param *.hostA.udpApp[0].typename "\"UDPBasicApp\""
+param *.hostD.numUdpApps 1
+param *.hostD.udpApp[0].localPort 5000
+param *.hostD.udpApp[0].typename "\"UDPSink\""
+param *.hostType "\"AODVRouter\""
+param *.mediumType "\"APSKScalarRadioMedium\""
+param *.radioMedium.backgroundNoise.power -90dBm
+param *.radioMedium.mediumLimitCache.carrierFrequency 2GHz
+param *.visualizer.dataLinkVisualizer.packetNameFilter "\"AODV*\""
+param *.visualizer.mediumVisualizer.signalPropagationUpdateInterval 100ns
+param *.visualizer.mobilityVisualizer.displayMovementTrail true
+param *.visualizer.networkRouteVisualizer.packetNameFilter "\"UDPData*\""
+param *.visualizer.sceneVisualizer.descriptionFigure "\"title\""
+
+scalar car_host_20.radioMedium.propagation 	"Arrival computation count" 	73521
+scalar car_host_20.radioMedium 	"transmission count" 	3501
+scalar car_host_20.radioMedium 	"radio frame send count" 	73521
+scalar car_host_20.radioMedium 	"reception computation count" 	73521
+scalar car_host_20.radioMedium 	"interference computation count" 	223763
+scalar car_host_20.radioMedium 	"reception decision computation count" 	30143
+scalar car_host_20.radioMedium 	"listening decision computation count" 	120120
+scalar car_host_20.radioMedium 	"reception cache hit" 	80.922515640366
+attr unit  %
+scalar car_host_20.radioMedium 	"interference cache hit" 	66.666666666667
+attr unit  %
+scalar car_host_20.radioMedium 	"noise cache hit" 	0
+attr unit  %
+scalar car_host_20.radioMedium 	"snir cache hit" 	50
+attr unit  %
+scalar car_host_20.radioMedium 	"reception decision cache hit" 	50
+attr unit  %
+scalar car_host_20.radioMedium 	"reception result cache hit" 	0
+attr unit  %
+scalar car_host_20.hostA.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar car_host_20.hostA.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar car_host_20.hostA.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar car_host_20.hostA.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar car_host_20.hostA.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar car_host_20.hostA.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar car_host_20.hostA.wlan[0].mac 	numRetry 	0
+scalar car_host_20.hostA.wlan[0].mac 	numSentWithoutRetry 	0
+scalar car_host_20.hostA.wlan[0].mac 	numGivenUp 	0
+scalar car_host_20.hostA.wlan[0].mac 	numCollision 	258
+scalar car_host_20.hostA.wlan[0].mac 	numSent 	1197
+scalar car_host_20.hostA.wlan[0].mac 	numReceived 	1
+scalar car_host_20.hostA.wlan[0].mac 	numSentBroadcast 	3
+scalar car_host_20.hostA.wlan[0].mac 	numReceivedBroadcast 	12
+statistic car_host_20.hostA.wlan[0].radio 	symbolErrorRate:histogram
+field count 890
+field mean 3.9072651748271e-005
+field stddev 1.7510196544885e-005
+field sum 0.034774660055961
+field sqrsum 1.6313117899541e-006
+field min 1.6334477877495e-014
+field max 0.0005500092921767
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.00027500464606385	0
+bin	-0.00023833735991982	0
+bin	-0.0002016700737758	0
+bin	-0.00016500278763178	0
+bin	-0.00012833550148775	0
+bin	-9.1668215343727e-005	0
+bin	-5.5000929199702e-005	0
+bin	-1.8333643055678e-005	8
+bin	1.8333643088347e-005	881
+bin	5.5000929232371e-005	0
+bin	9.1668215376395e-005	0
+bin	0.00012833550152042	0
+bin	0.00016500278766444	0
+bin	0.00020167007380847	0
+bin	0.00023833735995249	0
+bin	0.00027500464609652	0
+bin	0.00031167193224054	0
+bin	0.00034833921838457	0
+bin	0.00038500650452859	0
+bin	0.00042167379067262	0
+bin	0.00045834107681664	0
+bin	0.00049500836296066	0
+bin	0.00053167564910469	1
+bin	0.00056834293524871	0
+bin	0.00060501022139274	0
+bin	0.00064167750753676	0
+bin	0.00067834479368079	0
+bin	0.00071501207982481	0
+bin	0.00075167936596883	0
+bin	0.00078834665211286	0
+bin	0.00082501393825688	0
+statistic car_host_20.hostA.wlan[0].radio 	bitErrorRate:histogram
+field count 890
+field mean 3.9072651748271e-005
+field stddev 1.7510196544885e-005
+field sum 0.034774660055961
+field sqrsum 1.6313117899541e-006
+field min 1.6334477877495e-014
+field max 0.0005500092921767
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.00027500464606385	0
+bin	-0.00023833735991982	0
+bin	-0.0002016700737758	0
+bin	-0.00016500278763178	0
+bin	-0.00012833550148775	0
+bin	-9.1668215343727e-005	0
+bin	-5.5000929199702e-005	0
+bin	-1.8333643055678e-005	8
+bin	1.8333643088347e-005	881
+bin	5.5000929232371e-005	0
+bin	9.1668215376395e-005	0
+bin	0.00012833550152042	0
+bin	0.00016500278766444	0
+bin	0.00020167007380847	0
+bin	0.00023833735995249	0
+bin	0.00027500464609652	0
+bin	0.00031167193224054	0
+bin	0.00034833921838457	0
+bin	0.00038500650452859	0
+bin	0.00042167379067262	0
+bin	0.00045834107681664	0
+bin	0.00049500836296066	0
+bin	0.00053167564910469	1
+bin	0.00056834293524871	0
+bin	0.00060501022139274	0
+bin	0.00064167750753676	0
+bin	0.00067834479368079	0
+bin	0.00071501207982481	0
+bin	0.00075167936596883	0
+bin	0.00078834665211286	0
+bin	0.00082501393825688	0
+statistic car_host_20.hostA.wlan[0].radio 	packetErrorRate:histogram
+field count 890
+field mean 0.27154418722637
+field stddev 0.03105814144113
+field sum 241.67432663147
+field sqrsum 66.482795243773
+field min 7.8337336617551e-012
+field max 0.27521652343478
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.13760826170564	0
+bin	-0.11926049347717	0
+bin	-0.10091272524871	0
+bin	-0.082564957020249	0
+bin	-0.064217188791786	0
+bin	-0.045869420563323	0
+bin	-0.02752165233486	0
+bin	-0.0091738841063977	8
+bin	0.0091738841220651	4
+bin	0.027521652350528	0
+bin	0.045869420578991	0
+bin	0.064217188807454	0
+bin	0.082564957035916	0
+bin	0.10091272526438	0
+bin	0.11926049349284	0
+bin	0.1376082617213	0
+bin	0.15595602994977	0
+bin	0.17430379817823	0
+bin	0.19265156640669	0
+bin	0.21099933463516	0
+bin	0.22934710286362	1
+bin	0.24769487109208	0
+bin	0.26604263932054	877
+bin	0.28439040754901	0
+bin	0.30273817577747	0
+bin	0.32108594400593	0
+bin	0.3394337122344	0
+bin	0.35778148046286	0
+bin	0.37612924869132	0
+bin	0.39447701691978	0
+bin	0.41282478514825	0
+statistic car_host_20.hostA.wlan[0].radio 	minSNIR:histogram
+field count 890
+field mean 3.9372948020234
+field stddev 0.52043539029364
+field sum 3504.1923738009
+field sqrsum 14037.826731629
+field min 2.6627901409714
+field max 14.391706069124
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-3.2016678231048	0
+bin	-2.4197400945613	0
+bin	-1.6378123660178	0
+bin	-0.85588463747435	0
+bin	-0.073956908930852	0
+bin	0.70797081961264	0
+bin	1.4898985481561	0
+bin	2.2718262766996	1
+bin	3.0537540052431	0
+bin	3.8356817337866	881
+bin	4.6176094623301	3
+bin	5.3995371908736	2
+bin	6.1814649194171	0
+bin	6.9633926479606	1
+bin	7.7453203765041	0
+bin	8.5272481050476	0
+bin	9.3091758335911	0
+bin	10.091103562135	0
+bin	10.873031290678	0
+bin	11.654959019222	0
+bin	12.436886747765	0
+bin	13.218814476309	0
+bin	14.000742204852	2
+bin	14.782669933396	0
+bin	15.564597661939	0
+bin	16.346525390483	0
+bin	17.128453119026	0
+bin	17.91038084757	0
+bin	18.692308576113	0
+bin	19.474236304657	0
+bin	20.2561640332	0
+scalar car_host_20.hostA.wlan[0].radio 	transmissionState:count 	4800
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar car_host_20.hostA.wlan[0].radio 	receptionState:count 	4199
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar car_host_20.hostA.wlan[0].radio 	radioMode:count 	2402
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+scalar car_host_20.hostA.udpApp[0] 	"packets sent" 	1200
+scalar car_host_20.hostA.udpApp[0] 	"packets received" 	0
+scalar car_host_20.hostA.udpApp[0] 	sentPk:count 	1200
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar car_host_20.hostA.udpApp[0] 	sentPk:sum(packetBytes) 	1200000
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar car_host_20.hostA.udpApp[0] 	rcvdPk:count 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar car_host_20.hostA.udpApp[0] 	rcvdPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar car_host_20.hostA.udpApp[0] 	throughput:last 	nan
+attr source  throughput(rcvdPk)
+attr title  "throughput, last"
+attr unit  bps
+statistic car_host_20.hostA.udpApp[0] 	rcvdPkLifetime:stats
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "received packet lifetime, stats"
+attr unit  s
+scalar car_host_20.hostA.udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar car_host_20.hostA.udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar car_host_20.hostA.udp 	passedUpPk:count 	0
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar car_host_20.hostA.udp 	sentPk:count 	1200
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar car_host_20.hostA.udp 	sentPk:sum(packetBytes) 	1209600
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar car_host_20.hostA.udp 	rcvdPk:count 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar car_host_20.hostA.udp 	rcvdPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar car_host_20.hostD.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar car_host_20.hostD.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar car_host_20.hostD.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar car_host_20.hostD.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar car_host_20.hostD.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar car_host_20.hostD.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar car_host_20.hostD.wlan[0].mac 	numRetry 	0
+scalar car_host_20.hostD.wlan[0].mac 	numSentWithoutRetry 	0
+scalar car_host_20.hostD.wlan[0].mac 	numGivenUp 	0
+scalar car_host_20.hostD.wlan[0].mac 	numCollision 	1
+scalar car_host_20.hostD.wlan[0].mac 	numSent 	2
+scalar car_host_20.hostD.wlan[0].mac 	numReceived 	246
+scalar car_host_20.hostD.wlan[0].mac 	numSentBroadcast 	0
+scalar car_host_20.hostD.wlan[0].mac 	numReceivedBroadcast 	6
+statistic car_host_20.hostD.wlan[0].radio 	symbolErrorRate:histogram
+field count 254
+field mean 8.2044463058e-006
+field stddev 0.00010685704434415
+field sum 0.0020839293616732
+field sqrsum 2.9059597518229e-006
+field min 1.4573176676182e-011
+field max 0.0016887922352912
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.00084439609578584	0
+bin	-0.00073180994773797	0
+bin	-0.0006192237996901	0
+bin	-0.00050663765164223	0
+bin	-0.00039405150359437	0
+bin	-0.0002814653555465	0
+bin	-0.00016887920749863	0
+bin	-5.6293059450758e-005	250
+bin	5.6293088597111e-005	2
+bin	0.00016887923664498	1
+bin	0.00028146538469285	0
+bin	0.00039405153274072	0
+bin	0.00050663768078859	0
+bin	0.00061922382883646	0
+bin	0.00073180997688433	0
+bin	0.00084439612493219	0
+bin	0.00095698227298006	0
+bin	0.0010695684210279	0
+bin	0.0011821545690758	0
+bin	0.0012947407171237	0
+bin	0.0014073268651715	0
+bin	0.0015199130132194	0
+bin	0.0016324991612673	1
+bin	0.0017450853093151	0
+bin	0.001857671457363	0
+bin	0.0019702576054109	0
+bin	0.0020828437534588	0
+bin	0.0021954299015066	0
+bin	0.0023080160495545	0
+bin	0.0024206021976024	0
+bin	0.0025331883456502	0
+statistic car_host_20.hostD.wlan[0].radio 	bitErrorRate:histogram
+field count 254
+field mean 8.2044463058e-006
+field stddev 0.00010685704434415
+field sum 0.0020839293616732
+field sqrsum 2.9059597518229e-006
+field min 1.4573176676182e-011
+field max 0.0016887922352912
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.00084439609578584	0
+bin	-0.00073180994773797	0
+bin	-0.0006192237996901	0
+bin	-0.00050663765164223	0
+bin	-0.00039405150359437	0
+bin	-0.0002814653555465	0
+bin	-0.00016887920749863	0
+bin	-5.6293059450758e-005	250
+bin	5.6293088597111e-005	2
+bin	0.00016887923664498	1
+bin	0.00028146538469285	0
+bin	0.00039405153274072	0
+bin	0.00050663768078859	0
+bin	0.00061922382883646	0
+bin	0.00073180997688433	0
+bin	0.00084439612493219	0
+bin	0.00095698227298006	0
+bin	0.0010695684210279	0
+bin	0.0011821545690758	0
+bin	0.0012947407171237	0
+bin	0.0014073268651715	0
+bin	0.0015199130132194	0
+bin	0.0016324991612673	1
+bin	0.0017450853093151	0
+bin	0.001857671457363	0
+bin	0.0019702576054109	0
+bin	0.0020828437534588	0
+bin	0.0021954299015066	0
+bin	0.0023080160495545	0
+bin	0.0024206021976024	0
+bin	0.0025331883456502	0
+statistic car_host_20.hostD.wlan[0].radio 	packetErrorRate:histogram
+field count 254
+field mean 0.0029354249101254
+field stddev 0.035466284688361
+field sum 0.74559792717185
+field sqrsum 0.32042655617611
+field min 6.995151125011e-009
+field max 0.55572233001154
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.27786115451304	0
+bin	-0.24081299964528	0
+bin	-0.20376484477752	0
+bin	-0.16671668990976	0
+bin	-0.12966853504201	0
+bin	-0.092620380174247	0
+bin	-0.055572225306488	0
+bin	-0.018524070438728	250
+bin	0.018524084429031	2
+bin	0.05557223929679	1
+bin	0.092620394164549	0
+bin	0.12966854903231	0
+bin	0.16671670390007	0
+bin	0.20376485876783	0
+bin	0.24081301363559	0
+bin	0.27786116850334	0
+bin	0.3149093233711	0
+bin	0.35195747823886	0
+bin	0.38900563310662	0
+bin	0.42605378797438	0
+bin	0.46310194284214	0
+bin	0.5001500977099	0
+bin	0.53719825257766	1
+bin	0.57424640744542	0
+bin	0.61129456231318	0
+bin	0.64834271718094	0
+bin	0.6853908720487	0
+bin	0.72243902691645	0
+bin	0.75948718178421	0
+bin	0.79653533665197	0
+bin	0.83358349151973	0
+statistic car_host_20.hostD.wlan[0].radio 	minSNIR:histogram
+field count 254
+field mean 8.3410375043651
+field stddev 0.74253811041175
+field sum 2118.6235261087
+field sqrsum 17811.013088793
+field min 2.1478443339898
+field max 11.05835339501
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-2.3074101965201	0
+bin	-1.7133762591188	0
+bin	-1.1193423217175	0
+bin	-0.52530838431618	0
+bin	0.068725553085138	0
+bin	0.66275949048646	0
+bin	1.2567934278878	0
+bin	1.8508273652891	1
+bin	2.4448613026904	0
+bin	3.0388952400917	3
+bin	3.6329291774931	0
+bin	4.2269631148944	0
+bin	4.8209970522957	1
+bin	5.415030989697	0
+bin	6.0090649270983	0
+bin	6.6030988644997	0
+bin	7.197132801901	0
+bin	7.7911667393023	0
+bin	8.3852006767036	247
+bin	8.9792346141049	0
+bin	9.5732685515063	0
+bin	10.167302488908	0
+bin	10.761336426309	2
+bin	11.35537036371	0
+bin	11.949404301112	0
+bin	12.543438238513	0
+bin	13.137472175914	0
+bin	13.731506113316	0
+bin	14.325540050717	0
+bin	14.919573988118	0
+bin	15.513607925519	0
+scalar car_host_20.hostD.wlan[0].radio 	transmissionState:count 	8
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar car_host_20.hostD.wlan[0].radio 	receptionState:count 	1023
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar car_host_20.hostD.wlan[0].radio 	radioMode:count 	6
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+scalar car_host_20.hostD.udpApp[0] 	rcvdPk:count 	246
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar car_host_20.hostD.udpApp[0] 	rcvdPk:sum(packetBytes) 	246000
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar car_host_20.hostD.udpApp[0] 	throughput:last 	34273.963212613
+attr source  throughput(rcvdPk)
+attr title  "throughput, last"
+attr unit  bps
+statistic car_host_20.hostD.udpApp[0] 	endToEndDelay:histogram
+field count 246
+field mean 0.043039081579976
+field stddev 0.00040962727536798
+field sum 10.587614068674
+field sqrsum 0.45572229529262
+field min 0.041892984019
+field max 0.044212984019
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, histogram"
+attr unit  s
+bin	-INF	0
+bin	0.040732984019	0
+bin	0.040887650685667	0
+bin	0.041042317352333	0
+bin	0.041196984019	0
+bin	0.041351650685667	0
+bin	0.041506317352333	0
+bin	0.041660984019	0
+bin	0.041815650685667	1
+bin	0.041970317352333	1
+bin	0.042124984019	5
+bin	0.042279650685667	6
+bin	0.042434317352333	26
+bin	0.042588984019	23
+bin	0.042743650685667	33
+bin	0.042898317352333	32
+bin	0.043052984019	30
+bin	0.043207650685667	29
+bin	0.043362317352333	31
+bin	0.043516984019	11
+bin	0.043671650685667	14
+bin	0.043826317352333	3
+bin	0.043980984019	0
+bin	0.044135650685667	1
+bin	0.044290317352333	0
+bin	0.044444984019	0
+bin	0.044599650685667	0
+bin	0.044754317352333	0
+bin	0.044908984019	0
+bin	0.045063650685667	0
+bin	0.045218317352333	0
+bin	0.045372984019	0
+scalar car_host_20.hostD.udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar car_host_20.hostD.udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar car_host_20.hostD.udp 	passedUpPk:count 	246
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar car_host_20.hostD.udp 	sentPk:count 	0
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar car_host_20.hostD.udp 	sentPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar car_host_20.hostD.udp 	rcvdPk:count 	246
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar car_host_20.hostD.udp 	rcvdPk:sum(packetBytes) 	247968
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar car_host_20.hostB.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar car_host_20.hostB.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar car_host_20.hostB.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar car_host_20.hostB.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar car_host_20.hostB.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar car_host_20.hostB.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar car_host_20.hostB.wlan[0].mac 	numRetry 	0
+scalar car_host_20.hostB.wlan[0].mac 	numSentWithoutRetry 	0
+scalar car_host_20.hostB.wlan[0].mac 	numGivenUp 	0
+scalar car_host_20.hostB.wlan[0].mac 	numCollision 	3
+scalar car_host_20.hostB.wlan[0].mac 	numSent 	0
+scalar car_host_20.hostB.wlan[0].mac 	numReceived 	0
+scalar car_host_20.hostB.wlan[0].mac 	numSentBroadcast 	2
+scalar car_host_20.hostB.wlan[0].mac 	numReceivedBroadcast 	24
+statistic car_host_20.hostB.wlan[0].radio 	symbolErrorRate:histogram
+field count 2038
+field mean 1.2944150086272e-005
+field stddev 0.00040278288744856
+field sum 0.026380177875823
+field sqrsum 0.00033081223783812
+field min 1.8731929510013e-018
+field max 0.016559798909628
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.0082798994548142	0
+bin	-0.007175912860839	0
+bin	-0.0060719262668637	0
+bin	-0.0049679396728885	0
+bin	-0.0038639530789133	0
+bin	-0.0027599664849381	0
+bin	-0.0016559798909628	0
+bin	-0.00055199329698761	2035
+bin	0.00055199329698762	0
+bin	0.0016559798909628	1
+bin	0.0027599664849381	0
+bin	0.0038639530789133	0
+bin	0.0049679396728885	0
+bin	0.0060719262668637	0
+bin	0.007175912860839	1
+bin	0.0082798994548142	0
+bin	0.0093838860487894	0
+bin	0.010487872642765	0
+bin	0.01159185923674	0
+bin	0.012695845830715	0
+bin	0.01379983242469	0
+bin	0.014903819018666	0
+bin	0.016007805612641	1
+bin	0.017111792206616	0
+bin	0.018215778800591	0
+bin	0.019319765394566	0
+bin	0.020423751988542	0
+bin	0.021527738582517	0
+bin	0.022631725176492	0
+bin	0.023735711770467	0
+bin	0.024839698364443	0
+statistic car_host_20.hostB.wlan[0].radio 	bitErrorRate:histogram
+field count 2038
+field mean 1.2944150086272e-005
+field stddev 0.00040278288744856
+field sum 0.026380177875823
+field sqrsum 0.00033081223783812
+field min 1.8731929510013e-018
+field max 0.016559798909628
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.0082798994548142	0
+bin	-0.007175912860839	0
+bin	-0.0060719262668637	0
+bin	-0.0049679396728885	0
+bin	-0.0038639530789133	0
+bin	-0.0027599664849381	0
+bin	-0.0016559798909628	0
+bin	-0.00055199329698761	2035
+bin	0.00055199329698762	0
+bin	0.0016559798909628	1
+bin	0.0027599664849381	0
+bin	0.0038639530789133	0
+bin	0.0049679396728885	0
+bin	0.0060719262668637	0
+bin	0.007175912860839	1
+bin	0.0082798994548142	0
+bin	0.0093838860487894	0
+bin	0.010487872642765	0
+bin	0.01159185923674	0
+bin	0.012695845830715	0
+bin	0.01379983242469	0
+bin	0.014903819018666	0
+bin	0.016007805612641	1
+bin	0.017111792206616	0
+bin	0.018215778800591	0
+bin	0.019319765394566	0
+bin	0.020423751988542	0
+bin	0.021527738582517	0
+bin	0.022631725176492	0
+bin	0.023735711770467	0
+bin	0.024839698364443	0
+statistic car_host_20.hostB.wlan[0].radio 	packetErrorRate:histogram
+field count 2038
+field mean 0.0015609089338409
+field stddev 0.034364903422799
+field sum 3.1811324071678
+field sqrsum 2.4105536562392
+field min 0
+field max 0.99966961557933
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.49983480778966	0
+bin	-0.43319016675104	0
+bin	-0.36654552571242	0
+bin	-0.2999008846738	0
+bin	-0.23325624363518	0
+bin	-0.16661160259655	0
+bin	-0.099966961557933	0
+bin	-0.033322320519311	2030
+bin	0.033322320519311	3
+bin	0.099966961557933	2
+bin	0.16661160259655	0
+bin	0.23325624363518	0
+bin	0.2999008846738	0
+bin	0.36654552571242	0
+bin	0.43319016675104	0
+bin	0.49983480778966	0
+bin	0.56647944882828	0
+bin	0.63312408986691	1
+bin	0.69976873090553	0
+bin	0.76641337194415	0
+bin	0.83305801298277	0
+bin	0.89970265402139	0
+bin	0.96634729506002	2
+bin	1.0329919360986	0
+bin	1.0996365771373	0
+bin	1.1662812181759	0
+bin	1.2329258592145	0
+bin	1.2995705002531	0
+bin	1.3662151412917	0
+bin	1.4328597823304	0
+bin	1.499504423369	0
+statistic car_host_20.hostB.wlan[0].radio 	minSNIR:histogram
+field count 2038
+field mean 13.777272906606
+field stddev 4.5719436697639
+field sum 28078.082183663
+field sqrsum 429418.13752744
+field min 1.1348965431311
+field max 18.862683961755
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-7.728997166181	0
+bin	-6.5471446716061	0
+bin	-5.3652921770311	0
+bin	-4.1834396824562	0
+bin	-3.0015871878812	0
+bin	-1.8197346933063	0
+bin	-0.63788219873134	0
+bin	0.54397029584361	2
+bin	1.7258227904186	1
+bin	2.9076752849935	3
+bin	4.0895277795685	7
+bin	5.2713802741434	1
+bin	6.4532327687183	260
+bin	7.6350852632933	4
+bin	8.8169377578682	1
+bin	9.9987902524432	882
+bin	11.180642747018	0
+bin	12.362495241593	1
+bin	13.544347736168	0
+bin	14.726200230743	0
+bin	15.908052725318	0
+bin	17.089905219893	1
+bin	18.271757714468	875
+bin	19.453610209043	0
+bin	20.635462703618	0
+bin	21.817315198193	0
+bin	22.999167692768	0
+bin	24.181020187343	0
+bin	25.362872681918	0
+bin	26.544725176492	0
+bin	27.726577671067	0
+scalar car_host_20.hostB.wlan[0].radio 	transmissionState:count 	8
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar car_host_20.hostB.wlan[0].radio 	receptionState:count 	4588
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar car_host_20.hostB.wlan[0].radio 	radioMode:count 	6
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+scalar car_host_20.hostC.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar car_host_20.hostC.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar car_host_20.hostC.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar car_host_20.hostC.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar car_host_20.hostC.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar car_host_20.hostC.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar car_host_20.hostC.wlan[0].mac 	numRetry 	0
+scalar car_host_20.hostC.wlan[0].mac 	numSentWithoutRetry 	0
+scalar car_host_20.hostC.wlan[0].mac 	numGivenUp 	0
+scalar car_host_20.hostC.wlan[0].mac 	numCollision 	4
+scalar car_host_20.hostC.wlan[0].mac 	numSent 	0
+scalar car_host_20.hostC.wlan[0].mac 	numReceived 	0
+scalar car_host_20.hostC.wlan[0].mac 	numSentBroadcast 	2
+scalar car_host_20.hostC.wlan[0].mac 	numReceivedBroadcast 	15
+statistic car_host_20.hostC.wlan[0].radio 	symbolErrorRate:histogram
+field count 517
+field mean 0.00033810837786639
+field stddev 0.0043948290307068
+field sum 0.17480203135692
+field sqrsum 0.010025395491188
+field min 4.3379735672957e-026
+field max 0.070392026123251
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.035196013061626	0
+bin	-0.030503211320076	0
+bin	-0.025810409578525	0
+bin	-0.021117607836975	0
+bin	-0.016424806095425	0
+bin	-0.011732004353875	0
+bin	-0.0070392026123251	0
+bin	-0.002346400870775	513
+bin	0.002346400870775	0
+bin	0.0070392026123251	1
+bin	0.011732004353875	0
+bin	0.016424806095425	0
+bin	0.021117607836975	0
+bin	0.025810409578525	0
+bin	0.030503211320076	1
+bin	0.035196013061626	0
+bin	0.039888814803176	0
+bin	0.044581616544726	0
+bin	0.049274418286276	0
+bin	0.053967220027826	0
+bin	0.058660021769376	1
+bin	0.063352823510926	0
+bin	0.068045625252476	1
+bin	0.072738426994026	0
+bin	0.077431228735576	0
+bin	0.082124030477126	0
+bin	0.086816832218676	0
+bin	0.091509633960227	0
+bin	0.096202435701777	0
+bin	0.10089523744333	0
+bin	0.10558803918488	0
+statistic car_host_20.hostC.wlan[0].radio 	bitErrorRate:histogram
+field count 517
+field mean 0.00033810837786639
+field stddev 0.0043948290307068
+field sum 0.17480203135692
+field sqrsum 0.010025395491188
+field min 4.3379735672957e-026
+field max 0.070392026123251
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.035196013061626	0
+bin	-0.030503211320076	0
+bin	-0.025810409578525	0
+bin	-0.021117607836975	0
+bin	-0.016424806095425	0
+bin	-0.011732004353875	0
+bin	-0.0070392026123251	0
+bin	-0.002346400870775	513
+bin	0.002346400870775	0
+bin	0.0070392026123251	1
+bin	0.011732004353875	0
+bin	0.016424806095425	0
+bin	0.021117607836975	0
+bin	0.025810409578525	0
+bin	0.030503211320076	1
+bin	0.035196013061626	0
+bin	0.039888814803176	0
+bin	0.044581616544726	0
+bin	0.049274418286276	0
+bin	0.053967220027826	0
+bin	0.058660021769376	1
+bin	0.063352823510926	0
+bin	0.068045625252476	1
+bin	0.072738426994026	0
+bin	0.077431228735576	0
+bin	0.082124030477126	0
+bin	0.086816832218676	0
+bin	0.091509633960227	0
+bin	0.096202435701777	0
+bin	0.10089523744333	0
+bin	0.10558803918488	0
+statistic car_host_20.hostC.wlan[0].radio 	packetErrorRate:histogram
+field count 517
+field mean 0.0077346191524605
+field stddev 0.087464875941663
+field sum 3.9987981018221
+field sqrsum 3.9783831145062
+field min 0
+field max 0.99999999999999
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.43333333333333	0
+bin	-0.36666666666666	0
+bin	-0.3	0
+bin	-0.23333333333333	0
+bin	-0.16666666666667	0
+bin	-0.099999999999999	0
+bin	-0.033333333333333	513
+bin	0.033333333333333	0
+bin	0.099999999999999	0
+bin	0.16666666666667	0
+bin	0.23333333333333	0
+bin	0.3	0
+bin	0.36666666666666	0
+bin	0.43333333333333	0
+bin	0.5	0
+bin	0.56666666666666	0
+bin	0.63333333333333	0
+bin	0.7	0
+bin	0.76666666666666	0
+bin	0.83333333333333	0
+bin	0.89999999999999	0
+bin	0.96666666666666	4
+bin	1.0333333333333	0
+bin	1.1	0
+bin	1.1666666666667	0
+bin	1.2333333333333	0
+bin	1.3	0
+bin	1.3666666666667	0
+bin	1.4333333333333	0
+bin	1.5	0
+statistic car_host_20.hostC.wlan[0].radio 	minSNIR:histogram
+field count 517
+field mean 22.907967718247
+field stddev 5.1662791371745
+field sum 11843.419310334
+field sqrsum 285080.93433837
+field min 0.54234208110406
+field max 27.560328374752
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-12.96665106572	0
+bin	-11.165451979477	0
+bin	-9.3642528932337	0
+bin	-7.5630538069904	0
+bin	-5.7618547207472	0
+bin	-3.960655634504	0
+bin	-2.1594565482608	0
+bin	-0.35825746201755	4
+bin	1.4429416242257	0
+bin	3.2441407104689	3
+bin	5.0453397967121	5
+bin	6.8465388829554	2
+bin	8.6477379691986	0
+bin	10.448937055442	2
+bin	12.250136141685	0
+bin	14.051335227928	1
+bin	15.852534314171	0
+bin	17.653733400415	247
+bin	19.454932486658	0
+bin	21.256131572901	0
+bin	23.057330659144	0
+bin	24.858529745388	0
+bin	26.659728831631	253
+bin	28.460927917874	0
+bin	30.262127004117	0
+bin	32.063326090361	0
+bin	33.864525176604	0
+bin	35.665724262847	0
+bin	37.46692334909	0
+bin	39.268122435333	0
+bin	41.069321521577	0
+scalar car_host_20.hostC.wlan[0].radio 	transmissionState:count 	8
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar car_host_20.hostC.wlan[0].radio 	receptionState:count 	2808
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar car_host_20.hostC.wlan[0].radio 	radioMode:count 	6
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+scalar car_host_20.hostB1.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar car_host_20.hostB1.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar car_host_20.hostB1.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar car_host_20.hostB1.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar car_host_20.hostB1.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar car_host_20.hostB1.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar car_host_20.hostB1.wlan[0].mac 	numRetry 	0
+scalar car_host_20.hostB1.wlan[0].mac 	numSentWithoutRetry 	0
+scalar car_host_20.hostB1.wlan[0].mac 	numGivenUp 	0
+scalar car_host_20.hostB1.wlan[0].mac 	numCollision 	33
+scalar car_host_20.hostB1.wlan[0].mac 	numSent 	0
+scalar car_host_20.hostB1.wlan[0].mac 	numReceived 	0
+scalar car_host_20.hostB1.wlan[0].mac 	numSentBroadcast 	3
+scalar car_host_20.hostB1.wlan[0].mac 	numReceivedBroadcast 	14
+statistic car_host_20.hostB1.wlan[0].radio 	symbolErrorRate:histogram
+field count 2966
+field mean 0.00031286910886859
+field stddev 0.0061836557186117
+field sum 0.92796977690423
+field sqrsum 0.11366481128449
+field min 1.1520888865602e-021
+field max 0.1717644915366
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.0858822457683	0
+bin	-0.07443127966586	0
+bin	-0.06298031356342	0
+bin	-0.05152934746098	0
+bin	-0.04007838135854	0
+bin	-0.0286274152561	0
+bin	-0.01717644915366	0
+bin	-0.00572548305122	2958
+bin	0.00572548305122	0
+bin	0.01717644915366	0
+bin	0.0286274152561	0
+bin	0.04007838135854	0
+bin	0.05152934746098	0
+bin	0.06298031356342	0
+bin	0.07443127966586	0
+bin	0.0858822457683	6
+bin	0.09733321187074	0
+bin	0.10878417797318	0
+bin	0.12023514407562	0
+bin	0.13168611017806	0
+bin	0.1431370762805	0
+bin	0.15458804238294	0
+bin	0.16603900848538	2
+bin	0.17748997458782	0
+bin	0.18894094069026	0
+bin	0.2003919067927	0
+bin	0.21184287289514	0
+bin	0.22329383899758	0
+bin	0.23474480510002	0
+bin	0.24619577120246	0
+bin	0.2576467373049	0
+statistic car_host_20.hostB1.wlan[0].radio 	bitErrorRate:histogram
+field count 2966
+field mean 0.00031286910886859
+field stddev 0.0061836557186117
+field sum 0.92796977690423
+field sqrsum 0.11366481128449
+field min 1.1520888865602e-021
+field max 0.1717644915366
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.0858822457683	0
+bin	-0.07443127966586	0
+bin	-0.06298031356342	0
+bin	-0.05152934746098	0
+bin	-0.04007838135854	0
+bin	-0.0286274152561	0
+bin	-0.01717644915366	0
+bin	-0.00572548305122	2958
+bin	0.00572548305122	0
+bin	0.01717644915366	0
+bin	0.0286274152561	0
+bin	0.04007838135854	0
+bin	0.05152934746098	0
+bin	0.06298031356342	0
+bin	0.07443127966586	0
+bin	0.0858822457683	6
+bin	0.09733321187074	0
+bin	0.10878417797318	0
+bin	0.12023514407562	0
+bin	0.13168611017806	0
+bin	0.1431370762805	0
+bin	0.15458804238294	0
+bin	0.16603900848538	2
+bin	0.17748997458782	0
+bin	0.18894094069026	0
+bin	0.2003919067927	0
+bin	0.21184287289514	0
+bin	0.22329383899758	0
+bin	0.23474480510002	0
+bin	0.24619577120246	0
+bin	0.2576467373049	0
+statistic car_host_20.hostB1.wlan[0].radio 	packetErrorRate:histogram
+field count 2966
+field mean 0.010825703551112
+field stddev 0.058909472888084
+field sum 32.109036732599
+field sqrsum 10.637119490976
+field min 0
+field max 1
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.43333333333333	0
+bin	-0.36666666666667	0
+bin	-0.3	0
+bin	-0.23333333333333	0
+bin	-0.16666666666667	0
+bin	-0.1	0
+bin	-0.033333333333333	2953
+bin	0.033333333333333	0
+bin	0.1	0
+bin	0.16666666666667	2
+bin	0.23333333333333	0
+bin	0.3	0
+bin	0.36666666666667	1
+bin	0.43333333333333	0
+bin	0.5	0
+bin	0.56666666666667	0
+bin	0.63333333333333	0
+bin	0.7	0
+bin	0.76666666666667	0
+bin	0.83333333333333	0
+bin	0.9	0
+bin	0.96666666666667	10
+bin	1.0333333333333	0
+bin	1.1	0
+bin	1.1666666666667	0
+bin	1.2333333333333	0
+bin	1.3	0
+bin	1.3666666666667	0
+bin	1.4333333333333	0
+bin	1.5	0
+statistic car_host_20.hostB1.wlan[0].radio 	minSNIR:histogram
+field count 2966
+field mean 12.170164259304
+field stddev 7.1918814419844
+field sum 36096.707193097
+field sqrsum 592662.02123304
+field min 0.22430429675909
+field max 22.516346613574
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-10.921716861649	0
+bin	-9.4355807071942	0
+bin	-7.9494445527398	0
+bin	-6.4633083982855	0
+bin	-4.9771722438311	0
+bin	-3.4910360893768	0
+bin	-2.0048999349224	0
+bin	-0.51876378046808	8
+bin	0.96737237398627	3
+bin	2.4535085284406	2
+bin	3.939644682895	1193
+bin	5.4257808373493	1
+bin	6.9119169918037	1
+bin	8.398053146258	0
+bin	9.8841893007124	875
+bin	11.370325455167	0
+bin	12.856461609621	2
+bin	14.342597764075	0
+bin	15.82873391853	0
+bin	17.314870072984	0
+bin	18.801006227438	0
+bin	20.287142381893	0
+bin	21.773278536347	881
+bin	23.259414690802	0
+bin	24.745550845256	0
+bin	26.23168699971	0
+bin	27.717823154165	0
+bin	29.203959308619	0
+bin	30.690095463073	0
+bin	32.176231617528	0
+bin	33.662367771982	0
+scalar car_host_20.hostB1.wlan[0].radio 	transmissionState:count 	12
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar car_host_20.hostB1.wlan[0].radio 	receptionState:count 	5962
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar car_host_20.hostB1.wlan[0].radio 	radioMode:count 	8
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+scalar car_host_20.hostB2.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar car_host_20.hostB2.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar car_host_20.hostB2.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar car_host_20.hostB2.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar car_host_20.hostB2.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar car_host_20.hostB2.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar car_host_20.hostB2.wlan[0].mac 	numRetry 	0
+scalar car_host_20.hostB2.wlan[0].mac 	numSentWithoutRetry 	0
+scalar car_host_20.hostB2.wlan[0].mac 	numGivenUp 	0
+scalar car_host_20.hostB2.wlan[0].mac 	numCollision 	181
+scalar car_host_20.hostB2.wlan[0].mac 	numSent 	880
+scalar car_host_20.hostB2.wlan[0].mac 	numReceived 	880
+scalar car_host_20.hostB2.wlan[0].mac 	numSentBroadcast 	2
+scalar car_host_20.hostB2.wlan[0].mac 	numReceivedBroadcast 	19
+statistic car_host_20.hostB2.wlan[0].radio 	symbolErrorRate:histogram
+field count 1155
+field mean 4.6191159500803e-005
+field stddev 0.00034641495796489
+field sum 0.053350789223428
+field sqrsum 0.00014094816967401
+field min 2.0991935438118e-024
+field max 0.011499689039822
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.0057498445199109	0
+bin	-0.0049831985839228	0
+bin	-0.0042165526479347	0
+bin	-0.0034499067119465	0
+bin	-0.0026832607759584	0
+bin	-0.0019166148399703	0
+bin	-0.0011499689039822	0
+bin	-0.00038332296799406	1150
+bin	0.00038332296799406	4
+bin	0.0011499689039822	0
+bin	0.0019166148399703	0
+bin	0.0026832607759584	0
+bin	0.0034499067119465	0
+bin	0.0042165526479347	0
+bin	0.0049831985839228	0
+bin	0.0057498445199109	0
+bin	0.006516490455899	0
+bin	0.0072831363918871	0
+bin	0.0080497823278753	0
+bin	0.0088164282638634	0
+bin	0.0095830741998515	0
+bin	0.01034972013584	0
+bin	0.011116366071828	1
+bin	0.011883012007816	0
+bin	0.012649657943804	0
+bin	0.013416303879792	0
+bin	0.01418294981578	0
+bin	0.014949595751768	0
+bin	0.015716241687756	0
+bin	0.016482887623745	0
+bin	0.017249533559733	0
+statistic car_host_20.hostB2.wlan[0].radio 	bitErrorRate:histogram
+field count 1155
+field mean 4.6191159500803e-005
+field stddev 0.00034641495796489
+field sum 0.053350789223428
+field sqrsum 0.00014094816967401
+field min 2.0991935438118e-024
+field max 0.011499689039822
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.0057498445199109	0
+bin	-0.0049831985839228	0
+bin	-0.0042165526479347	0
+bin	-0.0034499067119465	0
+bin	-0.0026832607759584	0
+bin	-0.0019166148399703	0
+bin	-0.0011499689039822	0
+bin	-0.00038332296799406	1150
+bin	0.00038332296799406	4
+bin	0.0011499689039822	0
+bin	0.0019166148399703	0
+bin	0.0026832607759584	0
+bin	0.0034499067119465	0
+bin	0.0042165526479347	0
+bin	0.0049831985839228	0
+bin	0.0057498445199109	0
+bin	0.006516490455899	0
+bin	0.0072831363918871	0
+bin	0.0080497823278753	0
+bin	0.0088164282638634	0
+bin	0.0095830741998515	0
+bin	0.01034972013584	0
+bin	0.011116366071828	1
+bin	0.011883012007816	0
+bin	0.012649657943804	0
+bin	0.013416303879792	0
+bin	0.01418294981578	0
+bin	0.014949595751768	0
+bin	0.015716241687756	0
+bin	0.016482887623745	0
+bin	0.017249533559733	0
+statistic car_host_20.hostB2.wlan[0].radio 	packetErrorRate:histogram
+field count 1155
+field mean 0.15722394474327
+field stddev 0.29602035893647
+field sum 181.59365617847
+field sqrsum 129.67364401696
+field min 0
+field max 0.99611966760799
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.49805983380399	0
+bin	-0.43165185596346	0
+bin	-0.36524387812293	0
+bin	-0.2988359002824	0
+bin	-0.23242792244186	0
+bin	-0.16601994460133	0
+bin	-0.099611966760799	0
+bin	-0.033203988920266	897
+bin	0.033203988920266	3
+bin	0.099611966760799	0
+bin	0.16601994460133	0
+bin	0.23242792244186	0
+bin	0.2988359002824	3
+bin	0.36524387812293	1
+bin	0.43165185596346	0
+bin	0.49805983380399	0
+bin	0.56446781164453	0
+bin	0.63087578948506	0
+bin	0.69728376732559	250
+bin	0.76369174516612	0
+bin	0.83009972300666	0
+bin	0.89650770084719	0
+bin	0.96291567868772	1
+bin	1.0293236565283	0
+bin	1.0957316343688	0
+bin	1.1621396122093	0
+bin	1.2285475900499	0
+bin	1.2949555678904	0
+bin	1.3613635457309	0
+bin	1.4277715235715	0
+bin	1.494179501412	0
+statistic car_host_20.hostB2.wlan[0].radio 	minSNIR:histogram
+field count 1155
+field mean 20.405110461507
+field stddev 9.4257969261146
+field sum 23567.90258304
+field sqrsum 583433.53298995
+field min 1.2921380210496
+field max 25.638416672759
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-10.881001304805	0
+bin	-9.2579160613578	0
+bin	-7.6348308179105	0
+bin	-6.0117455744632	0
+bin	-4.3886603310159	0
+bin	-2.7655750875686	0
+bin	-1.1424898441214	0
+bin	0.48059539932592	1
+bin	2.1036806427732	257
+bin	3.7267658862205	5
+bin	5.3498511296678	0
+bin	6.972936373115	5
+bin	8.5960216165623	1
+bin	10.21910686001	3
+bin	11.842192103457	0
+bin	13.465277346904	0
+bin	15.088362590351	0
+bin	16.711447833799	0
+bin	18.334533077246	2
+bin	19.957618320693	0
+bin	21.580703564141	0
+bin	23.203788807588	0
+bin	24.826874051035	881
+bin	26.449959294482	0
+bin	28.07304453793	0
+bin	29.696129781377	0
+bin	31.319215024824	0
+bin	32.942300268272	0
+bin	34.565385511719	0
+bin	36.188470755166	0
+bin	37.811555998613	0
+scalar car_host_20.hostB2.wlan[0].radio 	transmissionState:count 	3528
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar car_host_20.hostB2.wlan[0].radio 	receptionState:count 	4091
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar car_host_20.hostB2.wlan[0].radio 	radioMode:count 	1766
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+scalar car_host_20.hostB3.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar car_host_20.hostB3.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar car_host_20.hostB3.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar car_host_20.hostB3.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar car_host_20.hostB3.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar car_host_20.hostB3.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar car_host_20.hostB3.wlan[0].mac 	numRetry 	0
+scalar car_host_20.hostB3.wlan[0].mac 	numSentWithoutRetry 	0
+scalar car_host_20.hostB3.wlan[0].mac 	numGivenUp 	0
+scalar car_host_20.hostB3.wlan[0].mac 	numCollision 	11
+scalar car_host_20.hostB3.wlan[0].mac 	numSent 	0
+scalar car_host_20.hostB3.wlan[0].mac 	numReceived 	0
+scalar car_host_20.hostB3.wlan[0].mac 	numSentBroadcast 	2
+scalar car_host_20.hostB3.wlan[0].mac 	numReceivedBroadcast 	18
+statistic car_host_20.hostB3.wlan[0].radio 	symbolErrorRate:histogram
+field count 1783
+field mean 0.00013657857225642
+field stddev 0.0032695175614497
+field sum 0.2435195943332
+field sqrsum 0.019082385299317
+field min 3.5823226032719e-030
+field max 0.098143373515256
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.049071686757628	0
+bin	-0.042528795189944	0
+bin	-0.035985903622261	0
+bin	-0.029443012054577	0
+bin	-0.022900120486893	0
+bin	-0.016357228919209	0
+bin	-0.0098143373515256	0
+bin	-0.0032714457838419	1778
+bin	0.0032714457838419	1
+bin	0.0098143373515256	1
+bin	0.016357228919209	0
+bin	0.022900120486893	0
+bin	0.029443012054577	1
+bin	0.035985903622261	0
+bin	0.042528795189944	0
+bin	0.049071686757628	0
+bin	0.055614578325312	0
+bin	0.062157469892996	0
+bin	0.068700361460679	0
+bin	0.075243253028363	0
+bin	0.081786144596047	0
+bin	0.088329036163731	1
+bin	0.094871927731414	1
+bin	0.1014148192991	0
+bin	0.10795771086678	0
+bin	0.11450060243447	0
+bin	0.12104349400215	0
+bin	0.12758638556983	0
+bin	0.13412927713752	0
+bin	0.1406721687052	0
+bin	0.14721506027288	0
+statistic car_host_20.hostB3.wlan[0].radio 	bitErrorRate:histogram
+field count 1783
+field mean 0.00013657857225642
+field stddev 0.0032695175614497
+field sum 0.2435195943332
+field sqrsum 0.019082385299317
+field min 3.5823226032719e-030
+field max 0.098143373515256
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.049071686757628	0
+bin	-0.042528795189944	0
+bin	-0.035985903622261	0
+bin	-0.029443012054577	0
+bin	-0.022900120486893	0
+bin	-0.016357228919209	0
+bin	-0.0098143373515256	0
+bin	-0.0032714457838419	1778
+bin	0.0032714457838419	1
+bin	0.0098143373515256	1
+bin	0.016357228919209	0
+bin	0.022900120486893	0
+bin	0.029443012054577	1
+bin	0.035985903622261	0
+bin	0.042528795189944	0
+bin	0.049071686757628	0
+bin	0.055614578325312	0
+bin	0.062157469892996	0
+bin	0.068700361460679	0
+bin	0.075243253028363	0
+bin	0.081786144596047	0
+bin	0.088329036163731	1
+bin	0.094871927731414	1
+bin	0.1014148192991	0
+bin	0.10795771086678	0
+bin	0.11450060243447	0
+bin	0.12104349400215	0
+bin	0.12758638556983	0
+bin	0.13412927713752	0
+bin	0.1406721687052	0
+bin	0.14721506027288	0
+statistic car_host_20.hostB3.wlan[0].radio 	packetErrorRate:histogram
+field count 1783
+field mean 0.0060864726308718
+field stddev 0.077170649080036
+field sum 10.852180700844
+field sqrsum 10.678412280372
+field min 0
+field max 1
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.43333333333333	0
+bin	-0.36666666666667	0
+bin	-0.3	0
+bin	-0.23333333333333	0
+bin	-0.16666666666667	0
+bin	-0.1	0
+bin	-0.033333333333333	1772
+bin	0.033333333333333	0
+bin	0.1	0
+bin	0.16666666666667	0
+bin	0.23333333333333	0
+bin	0.3	0
+bin	0.36666666666667	0
+bin	0.43333333333333	0
+bin	0.5	0
+bin	0.56666666666667	0
+bin	0.63333333333333	0
+bin	0.7	0
+bin	0.76666666666667	1
+bin	0.83333333333333	0
+bin	0.9	0
+bin	0.96666666666667	10
+bin	1.0333333333333	0
+bin	1.1	0
+bin	1.1666666666667	0
+bin	1.2333333333333	0
+bin	1.3	0
+bin	1.3666666666667	0
+bin	1.4333333333333	0
+bin	1.5	0
+statistic car_host_20.hostB3.wlan[0].radio 	minSNIR:histogram
+field count 1783
+field mean 16.868893706183
+field stddev 7.8804592003674
+field sum 30077.237478124
+field sqrsum 618034.83949992
+field min 0.4174473461502
+field max 32.222752918915
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-15.485205440232	0
+bin	-13.364851735381	0
+bin	-11.24449803053	0
+bin	-9.1241443256792	0
+bin	-7.0037906208282	0
+bin	-4.8834369159773	0
+bin	-2.7630832111263	0
+bin	-0.64272950627529	4
+bin	1.4776241985757	7
+bin	3.5979779034267	2
+bin	5.7183316082777	8
+bin	7.8386853131286	875
+bin	9.9590390179796	2
+bin	12.079392722831	2
+bin	14.199746427682	0
+bin	16.320100132533	0
+bin	18.440453837384	0
+bin	20.560807542235	0
+bin	22.681161247086	881
+bin	24.801514951937	0
+bin	26.921868656788	0
+bin	29.042222361638	0
+bin	31.162576066489	2
+bin	33.28292977134	0
+bin	35.403283476191	0
+bin	37.523637181042	0
+bin	39.643990885893	0
+bin	41.764344590744	0
+bin	43.884698295595	0
+bin	46.005052000446	0
+bin	48.125405705297	0
+scalar car_host_20.hostB3.wlan[0].radio 	transmissionState:count 	8
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar car_host_20.hostB3.wlan[0].radio 	receptionState:count 	6476
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar car_host_20.hostB3.wlan[0].radio 	radioMode:count 	6
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+scalar car_host_20.hostB4.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar car_host_20.hostB4.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar car_host_20.hostB4.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar car_host_20.hostB4.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar car_host_20.hostB4.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar car_host_20.hostB4.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar car_host_20.hostB4.wlan[0].mac 	numRetry 	0
+scalar car_host_20.hostB4.wlan[0].mac 	numSentWithoutRetry 	0
+scalar car_host_20.hostB4.wlan[0].mac 	numGivenUp 	0
+scalar car_host_20.hostB4.wlan[0].mac 	numCollision 	36
+scalar car_host_20.hostB4.wlan[0].mac 	numSent 	0
+scalar car_host_20.hostB4.wlan[0].mac 	numReceived 	0
+scalar car_host_20.hostB4.wlan[0].mac 	numSentBroadcast 	3
+scalar car_host_20.hostB4.wlan[0].mac 	numReceivedBroadcast 	20
+statistic car_host_20.hostB4.wlan[0].radio 	symbolErrorRate:histogram
+field count 2969
+field mean 0.00010956641472854
+field stddev 0.0033767887144822
+field sum 0.32530268532904
+field sqrsum 0.033878861850983
+field min 1.201045240857e-015
+field max 0.12624835460985
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.063124177304924	0
+bin	-0.054707620330934	0
+bin	-0.046291063356944	0
+bin	-0.037874506382954	0
+bin	-0.029457949408964	0
+bin	-0.021041392434974	0
+bin	-0.012624835460984	0
+bin	-0.0042082784869939	2965
+bin	0.0042082784869962	0
+bin	0.012624835460986	0
+bin	0.021041392434976	0
+bin	0.029457949408966	2
+bin	0.037874506382957	0
+bin	0.046291063356947	0
+bin	0.054707620330937	0
+bin	0.063124177304927	0
+bin	0.071540734278917	0
+bin	0.079957291252907	0
+bin	0.088373848226897	0
+bin	0.096790405200887	0
+bin	0.10520696217488	0
+bin	0.11362351914887	0
+bin	0.12204007612286	2
+bin	0.13045663309685	0
+bin	0.13887319007084	0
+bin	0.14728974704483	0
+bin	0.15570630401882	0
+bin	0.16412286099281	0
+bin	0.1725394179668	0
+bin	0.18095597494079	0
+bin	0.18937253191478	0
+statistic car_host_20.hostB4.wlan[0].radio 	bitErrorRate:histogram
+field count 2969
+field mean 0.00010956641472854
+field stddev 0.0033767887144822
+field sum 0.32530268532904
+field sqrsum 0.033878861850983
+field min 1.201045240857e-015
+field max 0.12624835460985
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.063124177304924	0
+bin	-0.054707620330934	0
+bin	-0.046291063356944	0
+bin	-0.037874506382954	0
+bin	-0.029457949408964	0
+bin	-0.021041392434974	0
+bin	-0.012624835460984	0
+bin	-0.0042082784869939	2965
+bin	0.0042082784869962	0
+bin	0.012624835460986	0
+bin	0.021041392434976	0
+bin	0.029457949408966	2
+bin	0.037874506382957	0
+bin	0.046291063356947	0
+bin	0.054707620330937	0
+bin	0.063124177304927	0
+bin	0.071540734278917	0
+bin	0.079957291252907	0
+bin	0.088373848226897	0
+bin	0.096790405200887	0
+bin	0.10520696217488	0
+bin	0.11362351914887	0
+bin	0.12204007612286	2
+bin	0.13045663309685	0
+bin	0.13887319007084	0
+bin	0.14728974704483	0
+bin	0.15570630401882	0
+bin	0.16412286099281	0
+bin	0.1725394179668	0
+bin	0.18095597494079	0
+bin	0.18937253191478	0
+statistic car_host_20.hostB4.wlan[0].radio 	packetErrorRate:histogram
+field count 2969
+field mean 0.012016678607365
+field stddev 0.058976109432302
+field sum 35.677518785267
+field sqrsum 10.751967920583
+field min 5.4711790653528e-013
+field max 1
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.49999999999918	0
+bin	-0.43333333333255	0
+bin	-0.36666666666592	0
+bin	-0.29999999999929	0
+bin	-0.23333333333266	0
+bin	-0.16666666666603	0
+bin	-0.099999999999398	0
+bin	-0.033333333332768	2955
+bin	0.033333333333862	4
+bin	0.10000000000049	0
+bin	0.16666666666712	0
+bin	0.23333333333375	0
+bin	0.30000000000038	0
+bin	0.36666666666701	0
+bin	0.43333333333364	0
+bin	0.50000000000027	0
+bin	0.5666666666669	0
+bin	0.63333333333353	0
+bin	0.70000000000016	0
+bin	0.76666666666679	0
+bin	0.83333333333342	0
+bin	0.90000000000005	0
+bin	0.96666666666668	10
+bin	1.0333333333333	0
+bin	1.0999999999999	0
+bin	1.1666666666666	0
+bin	1.2333333333332	0
+bin	1.2999999999998	0
+bin	1.3666666666665	0
+bin	1.4333333333331	0
+bin	1.4999999999997	0
+statistic car_host_20.hostB4.wlan[0].radio 	minSNIR:histogram
+field count 2969
+field mean 11.944308317933
+field stddev 4.5939059393948
+field sum 35462.651395944
+field sqrsum 486213.43028761
+field min 0.32735911978292
+field max 15.676037367741
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-7.3469800041959	0
+bin	-6.3237347876654	0
+bin	-5.3004895711349	0
+bin	-4.2772443546044	0
+bin	-3.2539991380739	0
+bin	-2.2307539215433	0
+bin	-1.2075087050128	0
+bin	-0.18426348848234	2
+bin	0.83898172804817	2
+bin	1.8622269445787	6
+bin	2.8854721611092	4
+bin	3.9087173776397	0
+bin	4.9319625941702	878
+bin	5.9552078107007	0
+bin	6.9784530272312	0
+bin	8.0016982437617	0
+bin	9.0249434602922	2
+bin	10.048188676823	1
+bin	11.071433893353	0
+bin	12.094679109884	0
+bin	13.117924326414	3
+bin	14.141169542945	1190
+bin	15.164414759475	881
+bin	16.187659976006	0
+bin	17.210905192536	0
+bin	18.234150409067	0
+bin	19.257395625597	0
+bin	20.280640842128	0
+bin	21.303886058658	0
+bin	22.327131275189	0
+bin	23.350376491719	0
+scalar car_host_20.hostB4.wlan[0].radio 	transmissionState:count 	12
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar car_host_20.hostB4.wlan[0].radio 	receptionState:count 	5959
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar car_host_20.hostB4.wlan[0].radio 	radioMode:count 	8
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+scalar car_host_20.hostC1.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar car_host_20.hostC1.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar car_host_20.hostC1.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar car_host_20.hostC1.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar car_host_20.hostC1.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar car_host_20.hostC1.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar car_host_20.hostC1.wlan[0].mac 	numRetry 	0
+scalar car_host_20.hostC1.wlan[0].mac 	numSentWithoutRetry 	0
+scalar car_host_20.hostC1.wlan[0].mac 	numGivenUp 	0
+scalar car_host_20.hostC1.wlan[0].mac 	numCollision 	5
+scalar car_host_20.hostC1.wlan[0].mac 	numSent 	247
+scalar car_host_20.hostC1.wlan[0].mac 	numReceived 	247
+scalar car_host_20.hostC1.wlan[0].mac 	numSentBroadcast 	1
+scalar car_host_20.hostC1.wlan[0].mac 	numReceivedBroadcast 	11
+statistic car_host_20.hostC1.wlan[0].radio 	symbolErrorRate:histogram
+field count 265
+field mean 1.0810099698851e-005
+field stddev 8.6273708422042e-005
+field sum 0.0028646764201956
+field sqrsum 1.9959597676386e-006
+field min 4.1876586383737e-019
+field max 0.00098421572215435
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.00049210786107717	0
+bin	-0.00042649347960022	0
+bin	-0.00036087909812326	0
+bin	-0.0002952647166463	0
+bin	-0.00022965033516935	0
+bin	-0.00016403595369239	0
+bin	-9.8421572215435e-005	0
+bin	-3.2807190738478e-005	260
+bin	3.2807190738479e-005	0
+bin	9.8421572215435e-005	0
+bin	0.00016403595369239	2
+bin	0.00022965033516935	0
+bin	0.00029526471664631	0
+bin	0.00036087909812326	0
+bin	0.00042649347960022	0
+bin	0.00049210786107718	0
+bin	0.00055772224255413	0
+bin	0.00062333662403109	1
+bin	0.00068895100550805	1
+bin	0.000754565386985	0
+bin	0.00082017976846196	0
+bin	0.00088579414993892	0
+bin	0.00095140853141587	1
+bin	0.0010170229128928	0
+bin	0.0010826372943698	0
+bin	0.0011482516758467	0
+bin	0.0012138660573237	0
+bin	0.0012794804388007	0
+bin	0.0013450948202776	0
+bin	0.0014107092017546	0
+bin	0.0014763235832315	0
+statistic car_host_20.hostC1.wlan[0].radio 	bitErrorRate:histogram
+field count 265
+field mean 1.0810099698851e-005
+field stddev 8.6273708422042e-005
+field sum 0.0028646764201956
+field sqrsum 1.9959597676386e-006
+field min 4.1876586383737e-019
+field max 0.00098421572215435
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.00049210786107717	0
+bin	-0.00042649347960022	0
+bin	-0.00036087909812326	0
+bin	-0.0002952647166463	0
+bin	-0.00022965033516935	0
+bin	-0.00016403595369239	0
+bin	-9.8421572215435e-005	0
+bin	-3.2807190738478e-005	260
+bin	3.2807190738479e-005	0
+bin	9.8421572215435e-005	0
+bin	0.00016403595369239	2
+bin	0.00022965033516935	0
+bin	0.00029526471664631	0
+bin	0.00036087909812326	0
+bin	0.00042649347960022	0
+bin	0.00049210786107718	0
+bin	0.00055772224255413	0
+bin	0.00062333662403109	1
+bin	0.00068895100550805	1
+bin	0.000754565386985	0
+bin	0.00082017976846196	0
+bin	0.00088579414993892	0
+bin	0.00095140853141587	1
+bin	0.0010170229128928	0
+bin	0.0010826372943698	0
+bin	0.0011482516758467	0
+bin	0.0012138660573237	0
+bin	0.0012794804388007	0
+bin	0.0013450948202776	0
+bin	0.0014107092017546	0
+bin	0.0014763235832315	0
+statistic car_host_20.hostC1.wlan[0].radio 	packetErrorRate:histogram
+field count 265
+field mean 0.0067907976539183
+field stddev 0.033539817066393
+field sum 1.7995613782883
+field sqrsum 0.30919916000139
+field min 0
+field max 0.37665564904587
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.18832782452293	0
+bin	-0.16321744791988	0
+bin	-0.13810707131682	0
+bin	-0.11299669471376	0
+bin	-0.087886318110703	0
+bin	-0.062775941507645	0
+bin	-0.037665564904587	0
+bin	-0.012555188301529	260
+bin	0.012555188301529	0
+bin	0.037665564904587	0
+bin	0.062775941507645	0
+bin	0.087886318110703	2
+bin	0.11299669471376	0
+bin	0.13810707131682	0
+bin	0.16321744791988	0
+bin	0.18832782452293	0
+bin	0.21343820112599	0
+bin	0.23854857772905	0
+bin	0.26365895433211	2
+bin	0.28876933093517	0
+bin	0.31387970753822	0
+bin	0.33899008414128	0
+bin	0.36410046074434	1
+bin	0.3892108373474	0
+bin	0.41432121395046	0
+bin	0.43943159055351	0
+bin	0.46454196715657	0
+bin	0.48965234375963	0
+bin	0.51476272036269	0
+bin	0.53987309696575	0
+bin	0.5649834735688	0
+statistic car_host_20.hostC1.wlan[0].radio 	minSNIR:histogram
+field count 265
+field mean 6.3277570309735
+field stddev 1.7254753604275
+field sum 1676.855613208
+field sqrsum 11396.732914337
+field min 2.3946857153106
+field max 19.602347093388
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-6.2091449737282	0
+bin	-5.061967548523	0
+bin	-3.9147901233178	0
+bin	-2.7676126981127	0
+bin	-1.6204352729075	0
+bin	-0.47325784770232	0
+bin	0.67391957750285	0
+bin	1.821097002708	3
+bin	2.9682744279132	2
+bin	4.1154518531184	1
+bin	5.2626292783235	254
+bin	6.4098067035287	0
+bin	7.5569841287339	0
+bin	8.7041615539391	0
+bin	9.8513389791442	0
+bin	10.998516404349	1
+bin	12.145693829555	0
+bin	13.29287125476	0
+bin	14.440048679965	0
+bin	15.58722610517	0
+bin	16.734403530375	0
+bin	17.88158095558	0
+bin	19.028758380786	4
+bin	20.175935805991	0
+bin	21.323113231196	0
+bin	22.470290656401	0
+bin	23.617468081606	0
+bin	24.764645506811	0
+bin	25.911822932017	0
+bin	27.059000357222	0
+bin	28.206177782427	0
+scalar car_host_20.hostC1.wlan[0].radio 	transmissionState:count 	992
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar car_host_20.hostC1.wlan[0].radio 	receptionState:count 	1056
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar car_host_20.hostC1.wlan[0].radio 	radioMode:count 	498
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+scalar car_host_20.hostC2.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar car_host_20.hostC2.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar car_host_20.hostC2.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar car_host_20.hostC2.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar car_host_20.hostC2.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar car_host_20.hostC2.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar car_host_20.hostC2.wlan[0].mac 	numRetry 	0
+scalar car_host_20.hostC2.wlan[0].mac 	numSentWithoutRetry 	0
+scalar car_host_20.hostC2.wlan[0].mac 	numGivenUp 	0
+scalar car_host_20.hostC2.wlan[0].mac 	numCollision 	169
+scalar car_host_20.hostC2.wlan[0].mac 	numSent 	0
+scalar car_host_20.hostC2.wlan[0].mac 	numReceived 	0
+scalar car_host_20.hostC2.wlan[0].mac 	numSentBroadcast 	2
+scalar car_host_20.hostC2.wlan[0].mac 	numReceivedBroadcast 	21
+statistic car_host_20.hostC2.wlan[0].radio 	symbolErrorRate:histogram
+field count 2284
+field mean 6.7835146256655e-005
+field stddev 0.0015536775677127
+field sum 0.1549354740502
+field sqrsum 0.0055214756969587
+field min 2.2165672654694e-027
+field max 0.051969884215942
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.025984942107971	0
+bin	-0.022520283160241	0
+bin	-0.019055624212512	0
+bin	-0.015590965264783	0
+bin	-0.012126306317053	0
+bin	-0.0086616473693236	0
+bin	-0.0051969884215942	0
+bin	-0.0017323294738647	2278
+bin	0.0017323294738647	2
+bin	0.0051969884215942	1
+bin	0.0086616473693236	0
+bin	0.012126306317053	0
+bin	0.015590965264783	0
+bin	0.019055624212512	0
+bin	0.022520283160241	1
+bin	0.025984942107971	0
+bin	0.0294496010557	0
+bin	0.03291426000343	0
+bin	0.036378918951159	0
+bin	0.039843577898889	0
+bin	0.043308236846618	1
+bin	0.046772895794348	0
+bin	0.050237554742077	1
+bin	0.053702213689807	0
+bin	0.057166872637536	0
+bin	0.060631531585266	0
+bin	0.064096190532995	0
+bin	0.067560849480724	0
+bin	0.071025508428454	0
+bin	0.074490167376183	0
+bin	0.077954826323913	0
+statistic car_host_20.hostC2.wlan[0].radio 	bitErrorRate:histogram
+field count 2284
+field mean 6.7835146256655e-005
+field stddev 0.0015536775677127
+field sum 0.1549354740502
+field sqrsum 0.0055214756969587
+field min 2.2165672654694e-027
+field max 0.051969884215942
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.025984942107971	0
+bin	-0.022520283160241	0
+bin	-0.019055624212512	0
+bin	-0.015590965264783	0
+bin	-0.012126306317053	0
+bin	-0.0086616473693236	0
+bin	-0.0051969884215942	0
+bin	-0.0017323294738647	2278
+bin	0.0017323294738647	2
+bin	0.0051969884215942	1
+bin	0.0086616473693236	0
+bin	0.012126306317053	0
+bin	0.015590965264783	0
+bin	0.019055624212512	0
+bin	0.022520283160241	1
+bin	0.025984942107971	0
+bin	0.0294496010557	0
+bin	0.03291426000343	0
+bin	0.036378918951159	0
+bin	0.039843577898889	0
+bin	0.043308236846618	1
+bin	0.046772895794348	0
+bin	0.050237554742077	1
+bin	0.053702213689807	0
+bin	0.057166872637536	0
+bin	0.060631531585266	0
+bin	0.064096190532995	0
+bin	0.067560849480724	0
+bin	0.071025508428454	0
+bin	0.074490167376183	0
+bin	0.077954826323913	0
+statistic car_host_20.hostC2.wlan[0].radio 	packetErrorRate:histogram
+field count 2284
+field mean 0.074519968073394
+field stddev 0.088794126296091
+field sum 170.20360707963
+field sqrsum 30.683645407629
+field min 0
+field max 0.99999999999251
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.49999999999625	0
+bin	-0.43333333333009	0
+bin	-0.36666666666392	0
+bin	-0.29999999999775	0
+bin	-0.23333333333159	0
+bin	-0.16666666666542	0
+bin	-0.099999999999251	0
+bin	-0.033333333333084	1146
+bin	0.033333333333084	2
+bin	0.099999999999251	878
+bin	0.16666666666542	246
+bin	0.23333333333159	0
+bin	0.29999999999775	6
+bin	0.36666666666392	0
+bin	0.43333333333009	0
+bin	0.49999999999625	0
+bin	0.56666666666242	0
+bin	0.63333333332859	0
+bin	0.69999999999476	0
+bin	0.76666666666092	0
+bin	0.83333333332709	0
+bin	0.89999999999326	1
+bin	0.96666666665942	5
+bin	1.0333333333256	0
+bin	1.0999999999918	0
+bin	1.1666666666579	0
+bin	1.2333333333241	0
+bin	1.2999999999903	0
+bin	1.3666666666564	0
+bin	1.4333333333226	0
+bin	1.4999999999888	0
+statistic car_host_20.hostC2.wlan[0].radio 	minSNIR:histogram
+field count 2284
+field mean 8.0701561598668
+field stddev 6.6292653061525
+field sum 18432.236669136
+field sqrsum 249082.39114958
+field min 0.66100678721488
+field max 29.034538258751
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-13.525758948553	0
+bin	-11.634190183784	0
+bin	-9.742621419015	0
+bin	-7.8510526542459	0
+bin	-5.9594838894769	0
+bin	-4.0679151247078	0
+bin	-2.1763463599387	0
+bin	-0.28477759516966	4
+bin	1.6067911695994	5
+bin	3.4983599343685	1138
+bin	5.3899286991375	1
+bin	7.2814974639066	877
+bin	9.1730662286757	0
+bin	11.064634993445	0
+bin	12.956203758214	2
+bin	14.847772522983	0
+bin	16.739341287752	0
+bin	18.630910052521	1
+bin	20.52247881729	0
+bin	22.414047582059	1
+bin	24.305616346828	253
+bin	26.197185111597	0
+bin	28.088753876366	2
+bin	29.980322641135	0
+bin	31.871891405904	0
+bin	33.763460170674	0
+bin	35.655028935443	0
+bin	37.546597700212	0
+bin	39.438166464981	0
+bin	41.32973522975	0
+bin	43.221303994519	0
+scalar car_host_20.hostC2.wlan[0].radio 	transmissionState:count 	8
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar car_host_20.hostC2.wlan[0].radio 	receptionState:count 	4582
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar car_host_20.hostC2.wlan[0].radio 	radioMode:count 	6
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+scalar car_host_20.hostC3.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar car_host_20.hostC3.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar car_host_20.hostC3.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar car_host_20.hostC3.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar car_host_20.hostC3.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar car_host_20.hostC3.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar car_host_20.hostC3.wlan[0].mac 	numRetry 	0
+scalar car_host_20.hostC3.wlan[0].mac 	numSentWithoutRetry 	0
+scalar car_host_20.hostC3.wlan[0].mac 	numGivenUp 	0
+scalar car_host_20.hostC3.wlan[0].mac 	numCollision 	469
+scalar car_host_20.hostC3.wlan[0].mac 	numSent 	0
+scalar car_host_20.hostC3.wlan[0].mac 	numReceived 	0
+scalar car_host_20.hostC3.wlan[0].mac 	numSentBroadcast 	2
+scalar car_host_20.hostC3.wlan[0].mac 	numReceivedBroadcast 	20
+statistic car_host_20.hostC3.wlan[0].radio 	symbolErrorRate:histogram
+field count 2280
+field mean 4.294184384163e-005
+field stddev 0.00019816882954089
+field sum 0.097907403958917
+field sqrsum 9.3702671370404e-005
+field min 1.2444097495622e-015
+field max 0.0073501242562949
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.0036750621281456	0
+bin	-0.0031850538443927	0
+bin	-0.0026950455606398	0
+bin	-0.0022050372768869	0
+bin	-0.001715028993134	0
+bin	-0.001225020709381	0
+bin	-0.00073501242562812	0
+bin	-0.00024500414187521	2274
+bin	0.0002450041418777	2
+bin	0.00073501242563061	0
+bin	0.0012250207093835	0
+bin	0.0017150289931364	0
+bin	0.0022050372768894	0
+bin	0.0026950455606423	1
+bin	0.0031850538443952	2
+bin	0.0036750621281481	0
+bin	0.004165070411901	0
+bin	0.0046550786956539	0
+bin	0.0051450869794068	0
+bin	0.0056350952631597	0
+bin	0.0061251035469127	0
+bin	0.0066151118306656	0
+bin	0.0071051201144185	1
+bin	0.0075951283981714	0
+bin	0.0080851366819243	0
+bin	0.0085751449656772	0
+bin	0.0090651532494301	0
+bin	0.0095551615331831	0
+bin	0.010045169816936	0
+bin	0.010535178100689	0
+bin	0.011025186384442	0
+statistic car_host_20.hostC3.wlan[0].radio 	bitErrorRate:histogram
+field count 2280
+field mean 4.294184384163e-005
+field stddev 0.00019816882954089
+field sum 0.097907403958917
+field sqrsum 9.3702671370404e-005
+field min 1.2444097495622e-015
+field max 0.0073501242562949
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.0036750621281456	0
+bin	-0.0031850538443927	0
+bin	-0.0026950455606398	0
+bin	-0.0022050372768869	0
+bin	-0.001715028993134	0
+bin	-0.001225020709381	0
+bin	-0.00073501242562812	0
+bin	-0.00024500414187521	2274
+bin	0.0002450041418777	2
+bin	0.00073501242563061	0
+bin	0.0012250207093835	0
+bin	0.0017150289931364	0
+bin	0.0022050372768894	0
+bin	0.0026950455606423	1
+bin	0.0031850538443952	2
+bin	0.0036750621281481	0
+bin	0.004165070411901	0
+bin	0.0046550786956539	0
+bin	0.0051450869794068	0
+bin	0.0056350952631597	0
+bin	0.0061251035469127	0
+bin	0.0066151118306656	0
+bin	0.0071051201144185	1
+bin	0.0075951283981714	0
+bin	0.0080851366819243	0
+bin	0.0085751449656772	0
+bin	0.0090651532494301	0
+bin	0.0095551615331831	0
+bin	0.010045169816936	0
+bin	0.010535178100689	0
+bin	0.011025186384442	0
+statistic car_host_20.hostC3.wlan[0].radio 	packetErrorRate:histogram
+field count 2280
+field mean 0.20508797246073
+field stddev 0.25658177103458
+field sum 467.60057721047
+field sqrsum 245.93540801445
+field min 5.8619775700208e-013
+field max 0.99999999999979
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.49999999999902	0
+bin	-0.4333333333324	0
+bin	-0.36666666666579	0
+bin	-0.29999999999918	0
+bin	-0.23333333333256	0
+bin	-0.16666666666595	0
+bin	-0.099999999999334	0
+bin	-0.033333333332721	1383
+bin	0.033333333333893	8
+bin	0.10000000000051	7
+bin	0.16666666666712	1
+bin	0.23333333333373	0
+bin	0.30000000000035	0
+bin	0.36666666666696	0
+bin	0.43333333333358	0
+bin	0.50000000000019	877
+bin	0.5666666666668	0
+bin	0.63333333333342	0
+bin	0.70000000000003	1
+bin	0.76666666666664	0
+bin	0.83333333333326	0
+bin	0.89999999999987	0
+bin	0.96666666666649	3
+bin	1.0333333333331	0
+bin	1.0999999999997	0
+bin	1.1666666666663	0
+bin	1.2333333333329	0
+bin	1.2999999999996	0
+bin	1.3666666666662	0
+bin	1.4333333333328	0
+bin	1.4999999999994	0
+statistic car_host_20.hostC3.wlan[0].radio 	minSNIR:histogram
+field count 2280
+field mean 6.2037142417989
+field stddev 2.3511999358153
+field sum 14144.468471302
+field sqrsum 100346.874152
+field min 1.4880104838094
+field max 15.658573228125
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-5.5972708883486	0
+bin	-4.6525667053942	0
+bin	-3.7078625224398	0
+bin	-2.7631583394854	0
+bin	-1.818454156531	0
+bin	-0.8737499735766	0
+bin	0.070954209377804	0
+bin	1.0156583923322	4
+bin	1.9603625752866	1
+bin	2.905066758241	886
+bin	3.8497709411954	7
+bin	4.7944751241498	1
+bin	5.7391793071042	247
+bin	6.6838834900586	0
+bin	7.628587673013	875
+bin	8.5732918559674	254
+bin	9.5179960389218	2
+bin	10.462700221876	1
+bin	11.407404404831	0
+bin	12.352108587785	0
+bin	13.296812770739	0
+bin	14.241516953694	0
+bin	15.186221136648	2
+bin	16.130925319603	0
+bin	17.075629502557	0
+bin	18.020333685511	0
+bin	18.965037868466	0
+bin	19.90974205142	0
+bin	20.854446234375	0
+bin	21.799150417329	0
+bin	22.743854600283	0
+scalar car_host_20.hostC3.wlan[0].radio 	transmissionState:count 	8
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar car_host_20.hostC3.wlan[0].radio 	receptionState:count 	4580
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar car_host_20.hostC3.wlan[0].radio 	radioMode:count 	6
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+scalar car_host_20.hostC4.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar car_host_20.hostC4.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar car_host_20.hostC4.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar car_host_20.hostC4.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar car_host_20.hostC4.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar car_host_20.hostC4.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar car_host_20.hostC4.wlan[0].mac 	numRetry 	0
+scalar car_host_20.hostC4.wlan[0].mac 	numSentWithoutRetry 	0
+scalar car_host_20.hostC4.wlan[0].mac 	numGivenUp 	0
+scalar car_host_20.hostC4.wlan[0].mac 	numCollision 	8
+scalar car_host_20.hostC4.wlan[0].mac 	numSent 	0
+scalar car_host_20.hostC4.wlan[0].mac 	numReceived 	0
+scalar car_host_20.hostC4.wlan[0].mac 	numSentBroadcast 	1
+scalar car_host_20.hostC4.wlan[0].mac 	numReceivedBroadcast 	12
+statistic car_host_20.hostC4.wlan[0].radio 	symbolErrorRate:histogram
+field count 514
+field mean 0.00012375541033133
+field stddev 0.001620661665132
+field sum 0.063610280910304
+field sqrsum 0.0013552893078563
+field min 5.9723957494651e-023
+field max 0.02610538612049
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.013052693060245	0
+bin	-0.011312333985546	0
+bin	-0.0095719749108464	0
+bin	-0.007831615836147	0
+bin	-0.0060912567614477	0
+bin	-0.0043508976867483	0
+bin	-0.002610538612049	0
+bin	-0.00087017953734967	510
+bin	0.00087017953734967	1
+bin	0.002610538612049	0
+bin	0.0043508976867483	0
+bin	0.0060912567614477	0
+bin	0.007831615836147	0
+bin	0.0095719749108464	0
+bin	0.011312333985546	1
+bin	0.013052693060245	0
+bin	0.014793052134944	0
+bin	0.016533411209644	0
+bin	0.018273770284343	0
+bin	0.020014129359042	0
+bin	0.021754488433742	1
+bin	0.023494847508441	0
+bin	0.02523520658314	1
+bin	0.02697556565784	0
+bin	0.028715924732539	0
+bin	0.030456283807238	0
+bin	0.032196642881938	0
+bin	0.033937001956637	0
+bin	0.035677361031336	0
+bin	0.037417720106036	0
+bin	0.039158079180735	0
+statistic car_host_20.hostC4.wlan[0].radio 	bitErrorRate:histogram
+field count 514
+field mean 0.00012375541033133
+field stddev 0.001620661665132
+field sum 0.063610280910304
+field sqrsum 0.0013552893078563
+field min 5.9723957494651e-023
+field max 0.02610538612049
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.013052693060245	0
+bin	-0.011312333985546	0
+bin	-0.0095719749108464	0
+bin	-0.007831615836147	0
+bin	-0.0060912567614477	0
+bin	-0.0043508976867483	0
+bin	-0.002610538612049	0
+bin	-0.00087017953734967	510
+bin	0.00087017953734967	1
+bin	0.002610538612049	0
+bin	0.0043508976867483	0
+bin	0.0060912567614477	0
+bin	0.007831615836147	0
+bin	0.0095719749108464	0
+bin	0.011312333985546	1
+bin	0.013052693060245	0
+bin	0.014793052134944	0
+bin	0.016533411209644	0
+bin	0.018273770284343	0
+bin	0.020014129359042	0
+bin	0.021754488433742	1
+bin	0.023494847508441	0
+bin	0.02523520658314	1
+bin	0.02697556565784	0
+bin	0.028715924732539	0
+bin	0.030456283807238	0
+bin	0.032196642881938	0
+bin	0.033937001956637	0
+bin	0.035677361031336	0
+bin	0.037417720106036	0
+bin	0.039158079180735	0
+statistic car_host_20.hostC4.wlan[0].radio 	packetErrorRate:histogram
+field count 514
+field mean 0.011019628701264
+field stddev 0.0809247363238
+field sum 5.6640891524499
+field sqrsum 3.4219572022671
+field min 0
+field max 0.99999286556047
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.49999643278023	0
+bin	-0.43333024174287	0
+bin	-0.36666405070551	0
+bin	-0.29999785966814	0
+bin	-0.23333166863078	0
+bin	-0.16666547759341	0
+bin	-0.099999286556047	0
+bin	-0.033333095518682	507
+bin	0.033333095518682	2
+bin	0.099999286556047	1
+bin	0.16666547759341	0
+bin	0.23333166863078	0
+bin	0.29999785966814	0
+bin	0.36666405070551	0
+bin	0.43333024174287	0
+bin	0.49999643278023	0
+bin	0.5666626238176	1
+bin	0.63332881485496	0
+bin	0.69999500589233	0
+bin	0.76666119692969	0
+bin	0.83332738796706	0
+bin	0.89999357900442	0
+bin	0.96665977004179	3
+bin	1.0333259610792	0
+bin	1.0999921521165	0
+bin	1.1666583431539	0
+bin	1.2333245341912	0
+bin	1.2999907252286	0
+bin	1.366656916266	0
+bin	1.4333231073033	0
+bin	1.4999892983407	0
+statistic car_host_20.hostC4.wlan[0].radio 	minSNIR:histogram
+field count 514
+field mean 14.524409551826
+field stddev 9.1576578158184
+field sum 7465.5465096387
+field sqrsum 151454.21842674
+field min 0.9422505296322
+field max 23.980715958204
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-10.576982184654	0
+bin	-9.0410844894157	0
+bin	-7.5051867941776	0
+bin	-5.9692890989394	0
+bin	-4.4333914037013	0
+bin	-2.8974937084631	0
+bin	-1.361596013225	0
+bin	0.17430168201313	3
+bin	1.7101993772513	3
+bin	3.2460970724894	1
+bin	4.7819947677275	255
+bin	6.3178924629657	1
+bin	7.8537901582038	0
+bin	9.3896878534419	1
+bin	10.92558554868	0
+bin	12.461483243918	0
+bin	13.997380939156	1
+bin	15.533278634394	0
+bin	17.069176329633	2
+bin	18.605074024871	0
+bin	20.140971720109	0
+bin	21.676869415347	0
+bin	23.212767110585	247
+bin	24.748664805823	0
+bin	26.284562501061	0
+bin	27.8204601963	0
+bin	29.356357891538	0
+bin	30.892255586776	0
+bin	32.428153282014	0
+bin	33.964050977252	0
+bin	35.49994867249	0
+scalar car_host_20.hostC4.wlan[0].radio 	transmissionState:count 	4
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar car_host_20.hostC4.wlan[0].radio 	receptionState:count 	2805
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar car_host_20.hostC4.wlan[0].radio 	radioMode:count 	4
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+scalar car_host_20.hostC5.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar car_host_20.hostC5.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar car_host_20.hostC5.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar car_host_20.hostC5.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar car_host_20.hostC5.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar car_host_20.hostC5.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar car_host_20.hostC5.wlan[0].mac 	numRetry 	0
+scalar car_host_20.hostC5.wlan[0].mac 	numSentWithoutRetry 	0
+scalar car_host_20.hostC5.wlan[0].mac 	numGivenUp 	0
+scalar car_host_20.hostC5.wlan[0].mac 	numCollision 	2
+scalar car_host_20.hostC5.wlan[0].mac 	numSent 	0
+scalar car_host_20.hostC5.wlan[0].mac 	numReceived 	0
+scalar car_host_20.hostC5.wlan[0].mac 	numSentBroadcast 	2
+scalar car_host_20.hostC5.wlan[0].mac 	numReceivedBroadcast 	14
+statistic car_host_20.hostC5.wlan[0].radio 	symbolErrorRate:histogram
+field count 267
+field mean 0.0002634494080279
+field stddev 0.0040192016445834
+field sum 0.070340991943448
+field sqrsum 0.0043154904674003
+field min 1.7899645766577e-025
+field max 0.065550930967886
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.032775465483943	0
+bin	-0.028405403419417	0
+bin	-0.024035341354891	0
+bin	-0.019665279290366	0
+bin	-0.01529521722584	0
+bin	-0.010925155161314	0
+bin	-0.0065550930967886	0
+bin	-0.0021850310322629	265
+bin	0.0021850310322629	1
+bin	0.0065550930967886	0
+bin	0.010925155161314	0
+bin	0.01529521722584	0
+bin	0.019665279290366	0
+bin	0.024035341354891	0
+bin	0.028405403419417	0
+bin	0.032775465483943	0
+bin	0.037145527548469	0
+bin	0.041515589612994	0
+bin	0.04588565167752	0
+bin	0.050255713742046	0
+bin	0.054625775806572	0
+bin	0.058995837871097	0
+bin	0.063365899935623	1
+bin	0.067735962000149	0
+bin	0.072106024064674	0
+bin	0.0764760861292	0
+bin	0.080846148193726	0
+bin	0.085216210258252	0
+bin	0.089586272322777	0
+bin	0.093956334387303	0
+bin	0.098326396451829	0
+statistic car_host_20.hostC5.wlan[0].radio 	bitErrorRate:histogram
+field count 267
+field mean 0.0002634494080279
+field stddev 0.0040192016445834
+field sum 0.070340991943448
+field sqrsum 0.0043154904674003
+field min 1.7899645766577e-025
+field max 0.065550930967886
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.032775465483943	0
+bin	-0.028405403419417	0
+bin	-0.024035341354891	0
+bin	-0.019665279290366	0
+bin	-0.01529521722584	0
+bin	-0.010925155161314	0
+bin	-0.0065550930967886	0
+bin	-0.0021850310322629	265
+bin	0.0021850310322629	1
+bin	0.0065550930967886	0
+bin	0.010925155161314	0
+bin	0.01529521722584	0
+bin	0.019665279290366	0
+bin	0.024035341354891	0
+bin	0.028405403419417	0
+bin	0.032775465483943	0
+bin	0.037145527548469	0
+bin	0.041515589612994	0
+bin	0.04588565167752	0
+bin	0.050255713742046	0
+bin	0.054625775806572	0
+bin	0.058995837871097	0
+bin	0.063365899935623	1
+bin	0.067735962000149	0
+bin	0.072106024064674	0
+bin	0.0764760861292	0
+bin	0.080846148193726	0
+bin	0.085216210258252	0
+bin	0.089586272322777	0
+bin	0.093956334387303	0
+bin	0.098326396451829	0
+statistic car_host_20.hostC5.wlan[0].radio 	packetErrorRate:histogram
+field count 267
+field mean 0.0078687991227225
+field stddev 0.081363093079865
+field sum 2.1009693657669
+field sqrsum 1.7774395814313
+field min 0
+field max 0.99999999999999
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.43333333333333	0
+bin	-0.36666666666666	0
+bin	-0.3	0
+bin	-0.23333333333333	0
+bin	-0.16666666666667	0
+bin	-0.099999999999999	0
+bin	-0.033333333333333	262
+bin	0.033333333333333	3
+bin	0.099999999999999	0
+bin	0.16666666666667	0
+bin	0.23333333333333	0
+bin	0.3	0
+bin	0.36666666666666	0
+bin	0.43333333333333	0
+bin	0.5	0
+bin	0.56666666666666	0
+bin	0.63333333333333	0
+bin	0.69999999999999	0
+bin	0.76666666666666	0
+bin	0.83333333333333	1
+bin	0.89999999999999	0
+bin	0.96666666666666	1
+bin	1.0333333333333	0
+bin	1.1	0
+bin	1.1666666666667	0
+bin	1.2333333333333	0
+bin	1.3	0
+bin	1.3666666666667	0
+bin	1.4333333333333	0
+bin	1.5	0
+statistic car_host_20.hostC5.wlan[0].radio 	minSNIR:histogram
+field count 267
+field mean 13.267267973436
+field stddev 2.1800285095001
+field sum 3542.3605489074
+field sqrsum 48261.618125275
+field min 0.56985213389338
+field max 26.85798165499
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-12.574212626655	0
+bin	-10.821670658582	0
+bin	-9.0691286905087	0
+bin	-7.3165867224356	0
+bin	-5.5640447543625	0
+bin	-3.8115027862894	0
+bin	-2.0589608182163	0
+bin	-0.30641885014317	1
+bin	1.4461231179299	1
+bin	3.1986650860031	7
+bin	4.9512070540762	2
+bin	6.7037490221493	0
+bin	8.4562909902224	1
+bin	10.208832958295	1
+bin	11.961374926369	253
+bin	13.713916894442	0
+bin	15.466458862515	0
+bin	17.219000830588	0
+bin	18.971542798661	0
+bin	20.724084766734	0
+bin	22.476626734807	0
+bin	24.22916870288	0
+bin	25.981710670954	1
+bin	27.734252639027	0
+bin	29.4867946071	0
+bin	31.239336575173	0
+bin	32.991878543246	0
+bin	34.744420511319	0
+bin	36.496962479392	0
+bin	38.249504447465	0
+bin	40.002046415538	0
+scalar car_host_20.hostC5.wlan[0].radio 	transmissionState:count 	8
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar car_host_20.hostC5.wlan[0].radio 	receptionState:count 	2810
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar car_host_20.hostC5.wlan[0].radio 	radioMode:count 	6
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+scalar car_host_20.hostB5.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar car_host_20.hostB5.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar car_host_20.hostB5.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar car_host_20.hostB5.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar car_host_20.hostB5.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar car_host_20.hostB5.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar car_host_20.hostB5.wlan[0].mac 	numRetry 	0
+scalar car_host_20.hostB5.wlan[0].mac 	numSentWithoutRetry 	0
+scalar car_host_20.hostB5.wlan[0].mac 	numGivenUp 	0
+scalar car_host_20.hostB5.wlan[0].mac 	numCollision 	2
+scalar car_host_20.hostB5.wlan[0].mac 	numSent 	0
+scalar car_host_20.hostB5.wlan[0].mac 	numReceived 	0
+scalar car_host_20.hostB5.wlan[0].mac 	numSentBroadcast 	2
+scalar car_host_20.hostB5.wlan[0].mac 	numReceivedBroadcast 	11
+statistic car_host_20.hostB5.wlan[0].radio 	symbolErrorRate:histogram
+field count 13
+field mean 0.00075011574508548
+field stddev 0.0020392622043881
+field sum 0.0097515046861112
+field sqrsum 5.7217841262277e-005
+field min 5.2015358731774e-024
+field max 0.0071784415262961
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.0035892207631481	0
+bin	-0.0031106579947283	0
+bin	-0.0026320952263086	0
+bin	-0.0021535324578888	0
+bin	-0.0016749696894691	0
+bin	-0.0011964069210494	0
+bin	-0.00071784415262961	0
+bin	-0.00023928138420987	11
+bin	0.00023928138420987	0
+bin	0.00071784415262962	0
+bin	0.0011964069210494	0
+bin	0.0016749696894691	0
+bin	0.0021535324578888	1
+bin	0.0026320952263086	0
+bin	0.0031106579947283	0
+bin	0.0035892207631481	0
+bin	0.0040677835315678	0
+bin	0.0045463462999876	0
+bin	0.0050249090684073	0
+bin	0.005503471836827	0
+bin	0.0059820346052468	0
+bin	0.0064605973736665	0
+bin	0.0069391601420863	1
+bin	0.007417722910506	0
+bin	0.0078962856789258	0
+bin	0.0083748484473455	0
+bin	0.0088534112157653	0
+bin	0.009331973984185	0
+bin	0.0098105367526047	0
+bin	0.010289099521024	0
+bin	0.010767662289444	0
+statistic car_host_20.hostB5.wlan[0].radio 	bitErrorRate:histogram
+field count 13
+field mean 0.00075011574508548
+field stddev 0.0020392622043881
+field sum 0.0097515046861112
+field sqrsum 5.7217841262277e-005
+field min 5.2015358731774e-024
+field max 0.0071784415262961
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.0035892207631481	0
+bin	-0.0031106579947283	0
+bin	-0.0026320952263086	0
+bin	-0.0021535324578888	0
+bin	-0.0016749696894691	0
+bin	-0.0011964069210494	0
+bin	-0.00071784415262961	0
+bin	-0.00023928138420987	11
+bin	0.00023928138420987	0
+bin	0.00071784415262962	0
+bin	0.0011964069210494	0
+bin	0.0016749696894691	0
+bin	0.0021535324578888	1
+bin	0.0026320952263086	0
+bin	0.0031106579947283	0
+bin	0.0035892207631481	0
+bin	0.0040677835315678	0
+bin	0.0045463462999876	0
+bin	0.0050249090684073	0
+bin	0.005503471836827	0
+bin	0.0059820346052468	0
+bin	0.0064605973736665	0
+bin	0.0069391601420863	1
+bin	0.007417722910506	0
+bin	0.0078962856789258	0
+bin	0.0083748484473455	0
+bin	0.0088534112157653	0
+bin	0.009331973984185	0
+bin	0.0098105367526047	0
+bin	0.010289099521024	0
+bin	0.010767662289444	0
+statistic car_host_20.hostB5.wlan[0].radio 	packetErrorRate:histogram
+field count 13
+field mean 0.13388843964571
+field stddev 0.31250255149886
+field sum 1.7405497153943
+field sqrsum 1.4049336218395
+field min 0
+field max 0.96850979215067
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.48425489607534	0
+bin	-0.41968757659862	0
+bin	-0.35512025712191	0
+bin	-0.2905529376452	0
+bin	-0.22598561816849	0
+bin	-0.16141829869178	0
+bin	-0.096850979215067	0
+bin	-0.032283659738356	10
+bin	0.032283659738356	1
+bin	0.096850979215067	0
+bin	0.16141829869178	0
+bin	0.22598561816849	0
+bin	0.2905529376452	0
+bin	0.35512025712191	0
+bin	0.41968757659862	0
+bin	0.48425489607534	0
+bin	0.54882221555205	0
+bin	0.61338953502876	0
+bin	0.67795685450547	1
+bin	0.74252417398218	0
+bin	0.80709149345889	0
+bin	0.8716588129356	0
+bin	0.93622613241231	1
+bin	1.000793451889	0
+bin	1.0653607713657	0
+bin	1.1299280908424	0
+bin	1.1944954103192	0
+bin	1.2590627297959	0
+bin	1.3236300492726	0
+bin	1.3881973687493	0
+bin	1.452764688226	0
+statistic car_host_20.hostB5.wlan[0].radio 	minSNIR:histogram
+field count 13
+field mean 7.5742108517225
+field stddev 7.9701859565165
+field sum 98.464741072393
+field sqrsum 1508.07908052
+field min 1.498430349662
+field max 25.189053926484
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-10.346881438749	0
+bin	-8.7675065336276	0
+bin	-7.1881316285061	0
+bin	-5.6087567233847	0
+bin	-4.0293818182632	0
+bin	-2.4500069131417	0
+bin	-0.87063200802023	0
+bin	0.70874289710125	2
+bin	2.2881178022227	1
+bin	3.8674927073442	4
+bin	5.4468676124657	3
+bin	7.0262425175872	1
+bin	8.6056174227086	0
+bin	10.18499232783	0
+bin	11.764367232952	0
+bin	13.343742138073	0
+bin	14.923117043195	0
+bin	16.502491948316	0
+bin	18.081866853437	0
+bin	19.661241758559	0
+bin	21.24061666368	0
+bin	22.819991568802	0
+bin	24.399366473923	2
+bin	25.978741379045	0
+bin	27.558116284166	0
+bin	29.137491189288	0
+bin	30.716866094409	0
+bin	32.296240999531	0
+bin	33.875615904652	0
+bin	35.454990809774	0
+bin	37.034365714895	0
+scalar car_host_20.hostB5.wlan[0].radio 	transmissionState:count 	8
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar car_host_20.hostB5.wlan[0].radio 	receptionState:count 	4074
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar car_host_20.hostB5.wlan[0].radio 	radioMode:count 	6
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+scalar car_host_20.hostB6.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar car_host_20.hostB6.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar car_host_20.hostB6.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar car_host_20.hostB6.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar car_host_20.hostB6.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar car_host_20.hostB6.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar car_host_20.hostB6.wlan[0].mac 	numRetry 	0
+scalar car_host_20.hostB6.wlan[0].mac 	numSentWithoutRetry 	0
+scalar car_host_20.hostB6.wlan[0].mac 	numGivenUp 	0
+scalar car_host_20.hostB6.wlan[0].mac 	numCollision 	111
+scalar car_host_20.hostB6.wlan[0].mac 	numSent 	0
+scalar car_host_20.hostB6.wlan[0].mac 	numReceived 	0
+scalar car_host_20.hostB6.wlan[0].mac 	numSentBroadcast 	2
+scalar car_host_20.hostB6.wlan[0].mac 	numReceivedBroadcast 	18
+statistic car_host_20.hostB6.wlan[0].radio 	symbolErrorRate:histogram
+field count 1781
+field mean 8.582752816835e-005
+field stddev 0.0014396085287613
+field sum 0.15285882766783
+field sqrsum 0.0037021209299637
+field min 3.5823226032719e-030
+field max 0.053517894757277
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.026758947378638	0
+bin	-0.023191087728153	0
+bin	-0.019623228077668	0
+bin	-0.016055368427183	0
+bin	-0.012487508776698	0
+bin	-0.0089196491262128	0
+bin	-0.0053517894757277	0
+bin	-0.0017839298252426	1772
+bin	0.0017839298252426	1
+bin	0.0053517894757277	0
+bin	0.0089196491262128	7
+bin	0.012487508776698	0
+bin	0.016055368427183	0
+bin	0.019623228077668	0
+bin	0.023191087728153	0
+bin	0.026758947378638	0
+bin	0.030326807029123	0
+bin	0.033894666679609	0
+bin	0.037462526330094	0
+bin	0.041030385980579	0
+bin	0.044598245631064	0
+bin	0.048166105281549	0
+bin	0.051733964932034	1
+bin	0.055301824582519	0
+bin	0.058869684233004	0
+bin	0.062437543883489	0
+bin	0.066005403533975	0
+bin	0.06957326318446	0
+bin	0.073141122834945	0
+bin	0.07670898248543	0
+bin	0.080276842135915	0
+statistic car_host_20.hostB6.wlan[0].radio 	bitErrorRate:histogram
+field count 1781
+field mean 8.582752816835e-005
+field stddev 0.0014396085287613
+field sum 0.15285882766783
+field sqrsum 0.0037021209299637
+field min 3.5823226032719e-030
+field max 0.053517894757277
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.026758947378638	0
+bin	-0.023191087728153	0
+bin	-0.019623228077668	0
+bin	-0.016055368427183	0
+bin	-0.012487508776698	0
+bin	-0.0089196491262128	0
+bin	-0.0053517894757277	0
+bin	-0.0017839298252426	1772
+bin	0.0017839298252426	1
+bin	0.0053517894757277	0
+bin	0.0089196491262128	7
+bin	0.012487508776698	0
+bin	0.016055368427183	0
+bin	0.019623228077668	0
+bin	0.023191087728153	0
+bin	0.026758947378638	0
+bin	0.030326807029123	0
+bin	0.033894666679609	0
+bin	0.037462526330094	0
+bin	0.041030385980579	0
+bin	0.044598245631064	0
+bin	0.048166105281549	0
+bin	0.051733964932034	1
+bin	0.055301824582519	0
+bin	0.058869684233004	0
+bin	0.062437543883489	0
+bin	0.066005403533975	0
+bin	0.06957326318446	0
+bin	0.073141122834945	0
+bin	0.07670898248543	0
+bin	0.080276842135915	0
+statistic car_host_20.hostB6.wlan[0].radio 	packetErrorRate:histogram
+field count 1781
+field mean 0.073417359664426
+field stddev 0.099209102742763
+field sum 130.75631756234
+field sqrsum 27.119337594173
+field min 0
+field max 1
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.43333333333333	0
+bin	-0.36666666666667	0
+bin	-0.3	0
+bin	-0.23333333333333	0
+bin	-0.16666666666667	0
+bin	-0.1	0
+bin	-0.033333333333333	896
+bin	0.033333333333333	0
+bin	0.1	873
+bin	0.16666666666667	0
+bin	0.23333333333333	1
+bin	0.3	0
+bin	0.36666666666667	0
+bin	0.43333333333333	0
+bin	0.5	0
+bin	0.56666666666667	0
+bin	0.63333333333333	0
+bin	0.7	0
+bin	0.76666666666667	0
+bin	0.83333333333333	1
+bin	0.9	0
+bin	0.96666666666667	10
+bin	1.0333333333333	0
+bin	1.1	0
+bin	1.1666666666667	0
+bin	1.2333333333333	0
+bin	1.3	0
+bin	1.3666666666667	0
+bin	1.4333333333333	0
+bin	1.5	0
+statistic car_host_20.hostB6.wlan[0].radio 	minSNIR:histogram
+field count 1781
+field mean 5.6602065920298
+field stddev 1.5688198093027
+field sum 10080.827940405
+field sqrsum 61440.496918827
+field min 0.64936256982951
+field max 32.222752918915
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-15.137332604713	0
+bin	-13.032439914774	0
+bin	-10.927547224835	0
+bin	-8.8226545348961	0
+bin	-6.7177618449571	0
+bin	-4.6128691550181	0
+bin	-2.507976465079	0
+bin	-0.40308377514001	9
+bin	1.701808914799	3
+bin	3.8067016047381	879
+bin	5.9115942946771	885
+bin	8.0164869846161	3
+bin	10.121379674555	0
+bin	12.226272364494	0
+bin	14.331165054433	1
+bin	16.436057744372	0
+bin	18.540950434311	0
+bin	20.64584312425	0
+bin	22.750735814189	0
+bin	24.855628504128	0
+bin	26.960521194067	0
+bin	29.065413884006	0
+bin	31.170306573945	1
+bin	33.275199263884	0
+bin	35.380091953824	0
+bin	37.484984643763	0
+bin	39.589877333702	0
+bin	41.694770023641	0
+bin	43.79966271358	0
+bin	45.904555403519	0
+bin	48.009448093458	0
+scalar car_host_20.hostB6.wlan[0].radio 	transmissionState:count 	8
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar car_host_20.hostB6.wlan[0].radio 	receptionState:count 	6476
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar car_host_20.hostB6.wlan[0].radio 	radioMode:count 	6
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+scalar car_host_20.hostB7.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar car_host_20.hostB7.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar car_host_20.hostB7.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar car_host_20.hostB7.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar car_host_20.hostB7.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar car_host_20.hostB7.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar car_host_20.hostB7.wlan[0].mac 	numRetry 	0
+scalar car_host_20.hostB7.wlan[0].mac 	numSentWithoutRetry 	0
+scalar car_host_20.hostB7.wlan[0].mac 	numGivenUp 	0
+scalar car_host_20.hostB7.wlan[0].mac 	numCollision 	5
+scalar car_host_20.hostB7.wlan[0].mac 	numSent 	0
+scalar car_host_20.hostB7.wlan[0].mac 	numReceived 	0
+scalar car_host_20.hostB7.wlan[0].mac 	numSentBroadcast 	2
+scalar car_host_20.hostB7.wlan[0].mac 	numReceivedBroadcast 	15
+statistic car_host_20.hostB7.wlan[0].radio 	symbolErrorRate:histogram
+field count 1778
+field mean 2.146444865522e-005
+field stddev 0.00073624996847575
+field sum 0.038163789708981
+field sqrsum 0.00096406692127982
+field min 4.2875315338644e-024
+field max 0.030533015019609
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.015266507509805	0
+bin	-0.013230973175164	0
+bin	-0.011195438840523	0
+bin	-0.0091599045058827	0
+bin	-0.0071243701712421	0
+bin	-0.0050888358366015	0
+bin	-0.0030533015019609	0
+bin	-0.0010177671673203	1776
+bin	0.0010177671673203	0
+bin	0.0030533015019609	0
+bin	0.0050888358366015	1
+bin	0.0071243701712421	0
+bin	0.0091599045058827	0
+bin	0.011195438840523	0
+bin	0.013230973175164	0
+bin	0.015266507509805	0
+bin	0.017302041844445	0
+bin	0.019337576179086	0
+bin	0.021373110513726	0
+bin	0.023408644848367	0
+bin	0.025444179183008	0
+bin	0.027479713517648	0
+bin	0.029515247852289	1
+bin	0.031550782186929	0
+bin	0.03358631652157	0
+bin	0.035621850856211	0
+bin	0.037657385190851	0
+bin	0.039692919525492	0
+bin	0.041728453860132	0
+bin	0.043763988194773	0
+bin	0.045799522529414	0
+statistic car_host_20.hostB7.wlan[0].radio 	bitErrorRate:histogram
+field count 1778
+field mean 2.146444865522e-005
+field stddev 0.00073624996847575
+field sum 0.038163789708981
+field sqrsum 0.00096406692127982
+field min 4.2875315338644e-024
+field max 0.030533015019609
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.015266507509805	0
+bin	-0.013230973175164	0
+bin	-0.011195438840523	0
+bin	-0.0091599045058827	0
+bin	-0.0071243701712421	0
+bin	-0.0050888358366015	0
+bin	-0.0030533015019609	0
+bin	-0.0010177671673203	1776
+bin	0.0010177671673203	0
+bin	0.0030533015019609	0
+bin	0.0050888358366015	1
+bin	0.0071243701712421	0
+bin	0.0091599045058827	0
+bin	0.011195438840523	0
+bin	0.013230973175164	0
+bin	0.015266507509805	0
+bin	0.017302041844445	0
+bin	0.019337576179086	0
+bin	0.021373110513726	0
+bin	0.023408644848367	0
+bin	0.025444179183008	0
+bin	0.027479713517648	0
+bin	0.029515247852289	1
+bin	0.031550782186929	0
+bin	0.03358631652157	0
+bin	0.035621850856211	0
+bin	0.037657385190851	0
+bin	0.039692919525492	0
+bin	0.041728453860132	0
+bin	0.043763988194773	0
+bin	0.045799522529414	0
+statistic car_host_20.hostB7.wlan[0].radio 	packetErrorRate:histogram
+field count 1778
+field mean 0.0028402959382839
+field stddev 0.046582226539503
+field sum 5.0500461782687
+field sqrsum 3.8702627304523
+field min 0
+field max 0.99999965655955
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.49999982827977	0
+bin	-0.43333318450914	0
+bin	-0.3666665407385	0
+bin	-0.29999989696786	0
+bin	-0.23333325319723	0
+bin	-0.16666660942659	0
+bin	-0.099999965655955	0
+bin	-0.033333321885318	1770
+bin	0.033333321885318	3
+bin	0.099999965655955	0
+bin	0.16666660942659	0
+bin	0.23333325319723	0
+bin	0.29999989696786	1
+bin	0.3666665407385	0
+bin	0.43333318450914	0
+bin	0.49999982827977	0
+bin	0.56666647205041	0
+bin	0.63333311582105	0
+bin	0.69999975959168	0
+bin	0.76666640336232	0
+bin	0.83333304713296	0
+bin	0.89999969090359	1
+bin	0.96666633467423	3
+bin	1.0333329784449	0
+bin	1.0999996222155	0
+bin	1.1666662659861	0
+bin	1.2333329097568	0
+bin	1.2999995535274	0
+bin	1.366666197298	0
+bin	1.4333328410687	0
+bin	1.4999994848393	0
+statistic car_host_20.hostB7.wlan[0].radio 	minSNIR:histogram
+field count 1778
+field mean 15.882745222712
+field stddev 9.2664586923953
+field sum 28239.521005981
+field sqrsum 601107.23250152
+field min 0.87704822126992
+field max 25.284745294596
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-11.326800315393	0
+bin	-9.6996205105047	0
+bin	-8.0724407056163	0
+bin	-6.4452609007279	0
+bin	-4.8180810958395	0
+bin	-3.1909012909511	0
+bin	-1.5637214860627	0
+bin	0.063458318825717	2
+bin	1.6906381237141	3
+bin	3.3178179286025	4
+bin	4.9449977334909	3
+bin	6.5721775383793	883
+bin	8.1993573432678	0
+bin	9.8265371481562	6
+bin	11.453716953045	2
+bin	13.080896757933	0
+bin	14.708076562821	0
+bin	16.33525636771	0
+bin	17.962436172598	0
+bin	19.589615977487	0
+bin	21.216795782375	0
+bin	22.843975587263	0
+bin	24.471155392152	875
+bin	26.09833519704	0
+bin	27.725515001929	0
+bin	29.352694806817	0
+bin	30.979874611705	0
+bin	32.607054416594	0
+bin	34.234234221482	0
+bin	35.861414026371	0
+bin	37.488593831259	0
+scalar car_host_20.hostB7.wlan[0].radio 	transmissionState:count 	8
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar car_host_20.hostB7.wlan[0].radio 	receptionState:count 	4081
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar car_host_20.hostB7.wlan[0].radio 	radioMode:count 	6
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+scalar car_host_20.hostB8.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar car_host_20.hostB8.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar car_host_20.hostB8.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar car_host_20.hostB8.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar car_host_20.hostB8.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar car_host_20.hostB8.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar car_host_20.hostB8.wlan[0].mac 	numRetry 	0
+scalar car_host_20.hostB8.wlan[0].mac 	numSentWithoutRetry 	0
+scalar car_host_20.hostB8.wlan[0].mac 	numGivenUp 	0
+scalar car_host_20.hostB8.wlan[0].mac 	numCollision 	320
+scalar car_host_20.hostB8.wlan[0].mac 	numSent 	880
+scalar car_host_20.hostB8.wlan[0].mac 	numReceived 	880
+scalar car_host_20.hostB8.wlan[0].mac 	numSentBroadcast 	3
+scalar car_host_20.hostB8.wlan[0].mac 	numReceivedBroadcast 	20
+statistic car_host_20.hostB8.wlan[0].radio 	symbolErrorRate:histogram
+field count 2095
+field mean 0.00076608836506454
+field stddev 0.012371365986623
+field sum 1.6049551248102
+field sqrsum 0.32171769565674
+field min 2.0991935438118e-024
+field max 0.2219558621664
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.1109779310832	0
+bin	-0.096180873605439	0
+bin	-0.081383816127679	0
+bin	-0.066586758649919	0
+bin	-0.051789701172159	0
+bin	-0.0369926436944	0
+bin	-0.02219558621664	0
+bin	-0.0073985287388799	2086
+bin	0.0073985287388799	0
+bin	0.02219558621664	2
+bin	0.0369926436944	0
+bin	0.051789701172159	0
+bin	0.066586758649919	0
+bin	0.081383816127679	0
+bin	0.096180873605439	0
+bin	0.1109779310832	0
+bin	0.12577498856096	0
+bin	0.14057204603872	1
+bin	0.15536910351648	0
+bin	0.17016616099424	0
+bin	0.184963218472	0
+bin	0.19976027594976	0
+bin	0.21455733342752	6
+bin	0.22935439090528	0
+bin	0.24415144838304	0
+bin	0.2589485058608	0
+bin	0.27374556333856	0
+bin	0.28854262081632	0
+bin	0.30333967829408	0
+bin	0.31813673577184	0
+bin	0.3329337932496	0
+statistic car_host_20.hostB8.wlan[0].radio 	bitErrorRate:histogram
+field count 2095
+field mean 0.00076608836506454
+field stddev 0.012371365986623
+field sum 1.6049551248102
+field sqrsum 0.32171769565674
+field min 2.0991935438118e-024
+field max 0.2219558621664
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.1109779310832	0
+bin	-0.096180873605439	0
+bin	-0.081383816127679	0
+bin	-0.066586758649919	0
+bin	-0.051789701172159	0
+bin	-0.0369926436944	0
+bin	-0.02219558621664	0
+bin	-0.0073985287388799	2086
+bin	0.0073985287388799	0
+bin	0.02219558621664	2
+bin	0.0369926436944	0
+bin	0.051789701172159	0
+bin	0.066586758649919	0
+bin	0.081383816127679	0
+bin	0.096180873605439	0
+bin	0.1109779310832	0
+bin	0.12577498856096	0
+bin	0.14057204603872	1
+bin	0.15536910351648	0
+bin	0.17016616099424	0
+bin	0.184963218472	0
+bin	0.19976027594976	0
+bin	0.21455733342752	6
+bin	0.22935439090528	0
+bin	0.24415144838304	0
+bin	0.2589485058608	0
+bin	0.27374556333856	0
+bin	0.28854262081632	0
+bin	0.30333967829408	0
+bin	0.31813673577184	0
+bin	0.3329337932496	0
+statistic car_host_20.hostB8.wlan[0].radio 	packetErrorRate:histogram
+field count 2095
+field mean 0.16115221418959
+field stddev 0.14771296328333
+field sum 337.61388872719
+field sqrsum 100.09646198849
+field min 0
+field max 1
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.43333333333333	0
+bin	-0.36666666666667	0
+bin	-0.3	0
+bin	-0.23333333333333	0
+bin	-0.16666666666667	0
+bin	-0.1	0
+bin	-0.033333333333333	895
+bin	0.033333333333333	1
+bin	0.1	0
+bin	0.16666666666667	0
+bin	0.23333333333333	1187
+bin	0.3	0
+bin	0.36666666666667	1
+bin	0.43333333333333	1
+bin	0.5	0
+bin	0.56666666666667	0
+bin	0.63333333333333	0
+bin	0.7	0
+bin	0.76666666666667	0
+bin	0.83333333333333	1
+bin	0.9	0
+bin	0.96666666666667	9
+bin	1.0333333333333	0
+bin	1.1	0
+bin	1.1666666666667	0
+bin	1.2333333333333	0
+bin	1.3	0
+bin	1.3666666666667	0
+bin	1.4333333333333	0
+bin	1.5	0
+statistic car_host_20.hostB8.wlan[0].radio 	minSNIR:histogram
+field count 2095
+field mean 13.030754784071
+field stddev 10.728058814008
+field sum 27299.431272629
+field sqrsum 596733.26360806
+field min 0.1465375251521
+field max 25.638416672759
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-12.599402048651	0
+bin	-10.899943438811	0
+bin	-9.2004848289703	0
+bin	-7.5010262191299	0
+bin	-5.8015676092895	0
+bin	-4.102108999449	0
+bin	-2.4026503896086	0
+bin	-0.70319177976812	9
+bin	0.99626683007232	3
+bin	2.6957254399128	1192
+bin	4.3951840497532	4
+bin	6.0946426595937	2
+bin	7.7941012694341	0
+bin	9.4935598792746	3
+bin	11.193018489115	0
+bin	12.892477098955	0
+bin	14.591935708796	3
+bin	16.291394318636	0
+bin	17.990852928477	0
+bin	19.690311538317	0
+bin	21.389770148158	3
+bin	23.089228757998	1
+bin	24.788687367839	875
+bin	26.488145977679	0
+bin	28.187604587519	0
+bin	29.88706319736	0
+bin	31.5865218072	0
+bin	33.285980417041	0
+bin	34.985439026881	0
+bin	36.684897636722	0
+bin	38.384356246562	0
+scalar car_host_20.hostB8.wlan[0].radio 	transmissionState:count 	3532
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar car_host_20.hostB8.wlan[0].radio 	receptionState:count 	6471
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar car_host_20.hostB8.wlan[0].radio 	radioMode:count 	1768
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+scalar car_host_20.hostC6.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar car_host_20.hostC6.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar car_host_20.hostC6.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar car_host_20.hostC6.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar car_host_20.hostC6.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar car_host_20.hostC6.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar car_host_20.hostC6.wlan[0].mac 	numRetry 	0
+scalar car_host_20.hostC6.wlan[0].mac 	numSentWithoutRetry 	0
+scalar car_host_20.hostC6.wlan[0].mac 	numGivenUp 	0
+scalar car_host_20.hostC6.wlan[0].mac 	numCollision 	10
+scalar car_host_20.hostC6.wlan[0].mac 	numSent 	0
+scalar car_host_20.hostC6.wlan[0].mac 	numReceived 	0
+scalar car_host_20.hostC6.wlan[0].mac 	numSentBroadcast 	1
+scalar car_host_20.hostC6.wlan[0].mac 	numReceivedBroadcast 	11
+statistic car_host_20.hostC6.wlan[0].radio 	symbolErrorRate:histogram
+field count 513
+field mean 0.00018662825617685
+field stddev 0.0031657435804919
+field sum 0.095740295418725
+field sqrsum 0.0051490972421019
+field min 1.3223099426291e-014
+field max 0.069946631848725
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.034973315924343	0
+bin	-0.030310207134429	0
+bin	-0.025647098344515	0
+bin	-0.0209839895546	0
+bin	-0.016320880764686	0
+bin	-0.011657771974772	0
+bin	-0.006994663184858	0
+bin	-0.0023315543949438	510
+bin	0.0023315543949703	0
+bin	0.0069946631848844	1
+bin	0.011657771974799	1
+bin	0.016320880764713	0
+bin	0.020983989554627	0
+bin	0.025647098344541	0
+bin	0.030310207134455	0
+bin	0.034973315924369	0
+bin	0.039636424714283	0
+bin	0.044299533504198	0
+bin	0.048962642294112	0
+bin	0.053625751084026	0
+bin	0.05828885987394	0
+bin	0.062951968663854	0
+bin	0.067615077453768	1
+bin	0.072278186243682	0
+bin	0.076941295033597	0
+bin	0.081604403823511	0
+bin	0.086267512613425	0
+bin	0.090930621403339	0
+bin	0.095593730193253	0
+bin	0.10025683898317	0
+bin	0.10491994777308	0
+statistic car_host_20.hostC6.wlan[0].radio 	bitErrorRate:histogram
+field count 513
+field mean 0.00018662825617685
+field stddev 0.0031657435804919
+field sum 0.095740295418725
+field sqrsum 0.0051490972421019
+field min 1.3223099426291e-014
+field max 0.069946631848725
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.034973315924343	0
+bin	-0.030310207134429	0
+bin	-0.025647098344515	0
+bin	-0.0209839895546	0
+bin	-0.016320880764686	0
+bin	-0.011657771974772	0
+bin	-0.006994663184858	0
+bin	-0.0023315543949438	510
+bin	0.0023315543949703	0
+bin	0.0069946631848844	1
+bin	0.011657771974799	1
+bin	0.016320880764713	0
+bin	0.020983989554627	0
+bin	0.025647098344541	0
+bin	0.030310207134455	0
+bin	0.034973315924369	0
+bin	0.039636424714283	0
+bin	0.044299533504198	0
+bin	0.048962642294112	0
+bin	0.053625751084026	0
+bin	0.05828885987394	0
+bin	0.062951968663854	0
+bin	0.067615077453768	1
+bin	0.072278186243682	0
+bin	0.076941295033597	0
+bin	0.081604403823511	0
+bin	0.086267512613425	0
+bin	0.090930621403339	0
+bin	0.095593730193253	0
+bin	0.10025683898317	0
+bin	0.10491994777308	0
+statistic car_host_20.hostC6.wlan[0].radio 	packetErrorRate:histogram
+field count 513
+field mean 0.017262497935047
+field stddev 0.080480278014669
+field sum 8.8556614406791
+field sqrsum 3.4691333137842
+field min 5.9188209888816e-012
+field max 0.99999999999999
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.49999999999112	0
+bin	-0.43333333332485	0
+bin	-0.36666666665857	0
+bin	-0.2999999999923	0
+bin	-0.23333333332603	0
+bin	-0.16666666665976	0
+bin	-0.099999999993489	0
+bin	-0.033333333327217	507
+bin	0.033333333339055	0
+bin	0.10000000000533	0
+bin	0.1666666666716	2
+bin	0.23333333333787	0
+bin	0.30000000000414	0
+bin	0.36666666667041	0
+bin	0.43333333333668	0
+bin	0.50000000000296	1
+bin	0.56666666666923	0
+bin	0.6333333333355	0
+bin	0.70000000000177	0
+bin	0.76666666666804	0
+bin	0.83333333333431	0
+bin	0.90000000000058	0
+bin	0.96666666666686	3
+bin	1.0333333333331	0
+bin	1.0999999999994	0
+bin	1.1666666666657	0
+bin	1.2333333333319	0
+bin	1.2999999999982	0
+bin	1.3666666666645	0
+bin	1.4333333333308	0
+bin	1.499999999997	0
+statistic car_host_20.hostC6.wlan[0].radio 	minSNIR:histogram
+field count 513
+field mean 9.8084432000749
+field stddev 4.6821977892371
+field sum 5031.7313616384
+field sqrsum 60578.015041085
+field min 0.54478321038175
+field max 14.495621313876
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-6.4306358413654	0
+bin	-5.5005799677992	0
+bin	-4.5705240942329	0
+bin	-3.6404682206666	0
+bin	-2.7104123471003	0
+bin	-1.780356473534	0
+bin	-0.85030059996769	0
+bin	0.079755273598606	1
+bin	1.0098111471649	2
+bin	1.9398670207312	3
+bin	2.8699228942975	0
+bin	3.7999787678638	1
+bin	4.7300346414301	248
+bin	5.6600905149964	0
+bin	6.5901463885627	0
+bin	7.5202022621289	0
+bin	8.4502581356952	3
+bin	9.3803140092615	0
+bin	10.310369882828	0
+bin	11.240425756394	0
+bin	12.17048162996	0
+bin	13.100537503527	2
+bin	14.030593377093	253
+bin	14.960649250659	0
+bin	15.890705124226	0
+bin	16.820760997792	0
+bin	17.750816871358	0
+bin	18.680872744924	0
+bin	19.610928618491	0
+bin	20.540984492057	0
+bin	21.471040365623	0
+scalar car_host_20.hostC6.wlan[0].radio 	transmissionState:count 	4
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar car_host_20.hostC6.wlan[0].radio 	receptionState:count 	1040
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar car_host_20.hostC6.wlan[0].radio 	radioMode:count 	4
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+scalar car_host_20.hostC7.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar car_host_20.hostC7.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar car_host_20.hostC7.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar car_host_20.hostC7.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar car_host_20.hostC7.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar car_host_20.hostC7.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar car_host_20.hostC7.wlan[0].mac 	numRetry 	0
+scalar car_host_20.hostC7.wlan[0].mac 	numSentWithoutRetry 	0
+scalar car_host_20.hostC7.wlan[0].mac 	numGivenUp 	0
+scalar car_host_20.hostC7.wlan[0].mac 	numCollision 	634
+scalar car_host_20.hostC7.wlan[0].mac 	numSent 	251
+scalar car_host_20.hostC7.wlan[0].mac 	numReceived 	251
+scalar car_host_20.hostC7.wlan[0].mac 	numSentBroadcast 	2
+scalar car_host_20.hostC7.wlan[0].mac 	numReceivedBroadcast 	16
+statistic car_host_20.hostC7.wlan[0].radio 	symbolErrorRate:histogram
+field count 1146
+field mean 0.00016174808313266
+field stddev 0.00073029582236158
+field sum 0.18536330327003
+field sqrsum 0.00064064728542886
+field min 4.3379735672957e-026
+field max 0.022414949124516
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.011207474562258	0
+bin	-0.0097131446206235	0
+bin	-0.0082188146789891	0
+bin	-0.0067244847373547	0
+bin	-0.0052301547957203	0
+bin	-0.0037358248540859	0
+bin	-0.0022414949124516	0
+bin	-0.00074716497081719	1137
+bin	0.00074716497081719	0
+bin	0.0022414949124516	6
+bin	0.0037358248540859	1
+bin	0.0052301547957203	1
+bin	0.0067244847373547	0
+bin	0.0082188146789891	0
+bin	0.0097131446206235	0
+bin	0.011207474562258	0
+bin	0.012701804503892	0
+bin	0.014196134445527	0
+bin	0.015690464387161	0
+bin	0.017184794328795	0
+bin	0.01867912427043	0
+bin	0.020173454212064	0
+bin	0.021667784153698	1
+bin	0.023162114095333	0
+bin	0.024656444036967	0
+bin	0.026150773978602	0
+bin	0.027645103920236	0
+bin	0.02913943386187	0
+bin	0.030633763803505	0
+bin	0.032128093745139	0
+bin	0.033622423686774	0
+statistic car_host_20.hostC7.wlan[0].radio 	bitErrorRate:histogram
+field count 1146
+field mean 0.00016174808313266
+field stddev 0.00073029582236158
+field sum 0.18536330327003
+field sqrsum 0.00064064728542886
+field min 4.3379735672957e-026
+field max 0.022414949124516
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.011207474562258	0
+bin	-0.0097131446206235	0
+bin	-0.0082188146789891	0
+bin	-0.0067244847373547	0
+bin	-0.0052301547957203	0
+bin	-0.0037358248540859	0
+bin	-0.0022414949124516	0
+bin	-0.00074716497081719	1137
+bin	0.00074716497081719	0
+bin	0.0022414949124516	6
+bin	0.0037358248540859	1
+bin	0.0052301547957203	1
+bin	0.0067244847373547	0
+bin	0.0082188146789891	0
+bin	0.0097131446206235	0
+bin	0.011207474562258	0
+bin	0.012701804503892	0
+bin	0.014196134445527	0
+bin	0.015690464387161	0
+bin	0.017184794328795	0
+bin	0.01867912427043	0
+bin	0.020173454212064	0
+bin	0.021667784153698	1
+bin	0.023162114095333	0
+bin	0.024656444036967	0
+bin	0.026150773978602	0
+bin	0.027645103920236	0
+bin	0.02913943386187	0
+bin	0.030633763803505	0
+bin	0.032128093745139	0
+bin	0.033622423686774	0
+statistic car_host_20.hostC7.wlan[0].radio 	packetErrorRate:histogram
+field count 1146
+field mean 0.55416899464633
+field stddev 0.302188232296
+field sum 635.07766786469
+field sqrsum 456.49915098313
+field min 0
+field max 0.99999999999322
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.49999999999661	0
+bin	-0.4333333333304	0
+bin	-0.36666666666418	0
+bin	-0.29999999999797	0
+bin	-0.23333333333175	0
+bin	-0.16666666666554	0
+bin	-0.099999999999322	0
+bin	-0.033333333333107	260
+bin	0.033333333333107	3
+bin	0.099999999999322	1
+bin	0.16666666666554	0
+bin	0.23333333333175	0
+bin	0.29999999999797	0
+bin	0.36666666666418	0
+bin	0.4333333333304	0
+bin	0.49999999999661	0
+bin	0.56666666666283	0
+bin	0.63333333332904	0
+bin	0.69999999999526	873
+bin	0.76666666666147	0
+bin	0.83333333332769	1
+bin	0.8999999999939	1
+bin	0.96666666666012	7
+bin	1.0333333333263	0
+bin	1.0999999999925	0
+bin	1.1666666666588	0
+bin	1.233333333325	0
+bin	1.2999999999912	0
+bin	1.3666666666574	0
+bin	1.4333333333236	0
+bin	1.4999999999898	0
+statistic car_host_20.hostC7.wlan[0].radio 	minSNIR:histogram
+field count 1146
+field mean 3.9841350754038
+field stddev 1.7015368643488
+field sum 4565.8187964127
+field sqrsum 21505.874532071
+field min 1.0062567878489
+field max 27.560328374752
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-12.270779005603	0
+bin	-10.500507566476	0
+bin	-8.730236127349	0
+bin	-6.9599646882221	0
+bin	-5.1896932490952	0
+bin	-3.4194218099683	0
+bin	-1.6491503708414	0
+bin	0.12112106828548	9
+bin	1.8913925074124	877
+bin	3.6616639465393	1
+bin	5.4319353856662	249
+bin	7.2022068247931	2
+bin	8.97247826392	1
+bin	10.742749703047	2
+bin	12.513021142174	1
+bin	14.283292581301	2
+bin	16.053564020428	0
+bin	17.823835459554	0
+bin	19.594106898681	0
+bin	21.364378337808	0
+bin	23.134649776935	0
+bin	24.904921216062	0
+bin	26.675192655189	2
+bin	28.445464094316	0
+bin	30.215735533443	0
+bin	31.98600697257	0
+bin	33.756278411697	0
+bin	35.526549850823	0
+bin	37.29682128995	0
+bin	39.067092729077	0
+bin	40.837364168204	0
+scalar car_host_20.hostC7.wlan[0].radio 	transmissionState:count 	1012
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar car_host_20.hostC7.wlan[0].radio 	receptionState:count 	4577
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar car_host_20.hostC7.wlan[0].radio 	radioMode:count 	508
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+scalar car_host_20.hostB9.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar car_host_20.hostB9.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar car_host_20.hostB9.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar car_host_20.hostB9.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar car_host_20.hostB9.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar car_host_20.hostB9.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar car_host_20.hostB9.wlan[0].mac 	numRetry 	0
+scalar car_host_20.hostB9.wlan[0].mac 	numSentWithoutRetry 	0
+scalar car_host_20.hostB9.wlan[0].mac 	numGivenUp 	0
+scalar car_host_20.hostB9.wlan[0].mac 	numCollision 	121
+scalar car_host_20.hostB9.wlan[0].mac 	numSent 	0
+scalar car_host_20.hostB9.wlan[0].mac 	numReceived 	0
+scalar car_host_20.hostB9.wlan[0].mac 	numSentBroadcast 	3
+scalar car_host_20.hostB9.wlan[0].mac 	numReceivedBroadcast 	14
+statistic car_host_20.hostB9.wlan[0].radio 	symbolErrorRate:histogram
+field count 2090
+field mean 4.8349707353257e-005
+field stddev 0.00076373309576081
+field sum 0.10105088836831
+field sqrsum 0.0012233749175001
+field min 4.7254058219179e-010
+field max 0.022549271201489
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.011274634891933	0
+bin	-0.0097713501766702	0
+bin	-0.008268065461407	0
+bin	-0.0067647807461438	0
+bin	-0.0052614960308806	0
+bin	-0.0037582113156174	0
+bin	-0.0022549266003542	0
+bin	-0.00075164188509102	2079
+bin	0.00075164283017218	1
+bin	0.0022549275454354	0
+bin	0.0037582122606986	8
+bin	0.0052614969759618	0
+bin	0.006764781691225	0
+bin	0.0082680664064882	0
+bin	0.0097713511217514	0
+bin	0.011274635837015	0
+bin	0.012777920552278	0
+bin	0.014281205267541	0
+bin	0.015784489982804	0
+bin	0.017287774698067	0
+bin	0.018791059413331	0
+bin	0.020294344128594	0
+bin	0.021797628843857	2
+bin	0.02330091355912	0
+bin	0.024804198274383	0
+bin	0.026307482989647	0
+bin	0.02781076770491	0
+bin	0.029314052420173	0
+bin	0.030817337135436	0
+bin	0.032320621850699	0
+bin	0.033823906565963	0
+statistic car_host_20.hostB9.wlan[0].radio 	bitErrorRate:histogram
+field count 2090
+field mean 4.8349707353257e-005
+field stddev 0.00076373309576081
+field sum 0.10105088836831
+field sqrsum 0.0012233749175001
+field min 4.7254058219179e-010
+field max 0.022549271201489
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.011274634891933	0
+bin	-0.0097713501766702	0
+bin	-0.008268065461407	0
+bin	-0.0067647807461438	0
+bin	-0.0052614960308806	0
+bin	-0.0037582113156174	0
+bin	-0.0022549266003542	0
+bin	-0.00075164188509102	2079
+bin	0.00075164283017218	1
+bin	0.0022549275454354	0
+bin	0.0037582122606986	8
+bin	0.0052614969759618	0
+bin	0.006764781691225	0
+bin	0.0082680664064882	0
+bin	0.0097713511217514	0
+bin	0.011274635837015	0
+bin	0.012777920552278	0
+bin	0.014281205267541	0
+bin	0.015784489982804	0
+bin	0.017287774698067	0
+bin	0.018791059413331	0
+bin	0.020294344128594	0
+bin	0.021797628843857	2
+bin	0.02330091355912	0
+bin	0.024804198274383	0
+bin	0.026307482989647	0
+bin	0.02781076770491	0
+bin	0.029314052420173	0
+bin	0.030817337135436	0
+bin	0.032320621850699	0
+bin	0.033823906565963	0
+statistic car_host_20.hostB9.wlan[0].radio 	packetErrorRate:histogram
+field count 2090
+field mean 0.056984574388457
+field stddev 0.080252154829271
+field sum 119.09776047187
+field sqrsum 20.240748244163
+field min 2.2681944422676e-007
+field max 1
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.49999965977083	0
+bin	-0.43333300822546	0
+bin	-0.36666635668009	0
+bin	-0.29999970513472	0
+bin	-0.23333305358935	0
+bin	-0.16666640204398	0
+bin	-0.099999750498611	0
+bin	-0.033333098953241	1201
+bin	0.033333552592129	0
+bin	0.1000002041375	877
+bin	0.16666685568287	0
+bin	0.23333350722824	1
+bin	0.30000015877361	0
+bin	0.36666681031898	1
+bin	0.43333346186435	0
+bin	0.50000011340972	0
+bin	0.56666676495509	0
+bin	0.63333341650046	0
+bin	0.70000006804583	0
+bin	0.7666667195912	0
+bin	0.83333337113657	0
+bin	0.90000002268194	0
+bin	0.96666667422732	10
+bin	1.0333333257727	0
+bin	1.0999999773181	0
+bin	1.1666666288634	0
+bin	1.2333332804088	0
+bin	1.2999999319542	0
+bin	1.3666665834995	0
+bin	1.4333332350449	0
+bin	1.4999998865903	0
+statistic car_host_20.hostB9.wlan[0].radio 	minSNIR:histogram
+field count 2090
+field mean 4.9798075225474
+field stddev 0.59171820755739
+field sum 10407.797722124
+field sqrsum 52560.251873001
+field min 1.0037376699518
+field max 9.3587637118578
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-3.1737753510013	0
+bin	-2.6167736148742	0
+bin	-2.0597718787471	0
+bin	-1.5027701426201	0
+bin	-0.94576840649299	0
+bin	-0.38876667036592	0
+bin	0.16823506576115	0
+bin	0.72523680188822	2
+bin	1.2822385380153	8
+bin	1.8392402741424	1
+bin	2.3962420102694	1
+bin	2.9532437463965	0
+bin	3.5102454825236	1
+bin	4.0672472186506	882
+bin	4.6242489547777	0
+bin	5.1812506909048	1190
+bin	5.7382524270319	0
+bin	6.2952541631589	0
+bin	6.852255899286	0
+bin	7.4092576354131	1
+bin	7.9662593715401	2
+bin	8.5232611076672	0
+bin	9.0802628437943	2
+bin	9.6372645799214	0
+bin	10.194266316048	0
+bin	10.751268052176	0
+bin	11.308269788303	0
+bin	11.86527152443	0
+bin	12.422273260557	0
+bin	12.979274996684	0
+bin	13.536276732811	0
+scalar car_host_20.hostB9.wlan[0].radio 	transmissionState:count 	12
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar car_host_20.hostB9.wlan[0].radio 	receptionState:count 	5959
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar car_host_20.hostB9.wlan[0].radio 	radioMode:count 	8
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+scalar car_host_20.hostC8.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar car_host_20.hostC8.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar car_host_20.hostC8.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar car_host_20.hostC8.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar car_host_20.hostC8.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar car_host_20.hostC8.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar car_host_20.hostC8.wlan[0].mac 	numRetry 	0
+scalar car_host_20.hostC8.wlan[0].mac 	numSentWithoutRetry 	0
+scalar car_host_20.hostC8.wlan[0].mac 	numGivenUp 	0
+scalar car_host_20.hostC8.wlan[0].mac 	numCollision 	3
+scalar car_host_20.hostC8.wlan[0].mac 	numSent 	0
+scalar car_host_20.hostC8.wlan[0].mac 	numReceived 	0
+scalar car_host_20.hostC8.wlan[0].mac 	numSentBroadcast 	2
+scalar car_host_20.hostC8.wlan[0].mac 	numReceivedBroadcast 	8
+statistic car_host_20.hostC8.wlan[0].radio 	symbolErrorRate:histogram
+field count 511
+field mean 1.7019607828601e-005
+field stddev 0.00022804033741733
+field sum 0.0086970196004149
+field sqrsum 2.6669241562476e-005
+field min 4.1876586383737e-019
+field max 0.004489007971729
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.0022445039858645	0
+bin	-0.0019452367877492	0
+bin	-0.001645969589634	0
+bin	-0.0013467023915187	0
+bin	-0.0010474351934034	0
+bin	-0.00074816799528816	0
+bin	-0.0004489007971729	0
+bin	-0.00014963359905763	506
+bin	0.00014963359905763	2
+bin	0.0004489007971729	0
+bin	0.00074816799528816	0
+bin	0.0010474351934034	0
+bin	0.0013467023915187	1
+bin	0.001645969589634	1
+bin	0.0019452367877492	0
+bin	0.0022445039858645	0
+bin	0.0025437711839797	0
+bin	0.002843038382095	0
+bin	0.0031423055802103	0
+bin	0.0034415727783255	0
+bin	0.0037408399764408	0
+bin	0.0040401071745561	0
+bin	0.0043393743726713	1
+bin	0.0046386415707866	0
+bin	0.0049379087689019	0
+bin	0.0052371759670171	0
+bin	0.0055364431651324	0
+bin	0.0058357103632477	0
+bin	0.0061349775613629	0
+bin	0.0064342447594782	0
+bin	0.0067335119575934	0
+statistic car_host_20.hostC8.wlan[0].radio 	bitErrorRate:histogram
+field count 511
+field mean 1.7019607828601e-005
+field stddev 0.00022804033741733
+field sum 0.0086970196004149
+field sqrsum 2.6669241562476e-005
+field min 4.1876586383737e-019
+field max 0.004489007971729
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.0022445039858645	0
+bin	-0.0019452367877492	0
+bin	-0.001645969589634	0
+bin	-0.0013467023915187	0
+bin	-0.0010474351934034	0
+bin	-0.00074816799528816	0
+bin	-0.0004489007971729	0
+bin	-0.00014963359905763	506
+bin	0.00014963359905763	2
+bin	0.0004489007971729	0
+bin	0.00074816799528816	0
+bin	0.0010474351934034	0
+bin	0.0013467023915187	1
+bin	0.001645969589634	1
+bin	0.0019452367877492	0
+bin	0.0022445039858645	0
+bin	0.0025437711839797	0
+bin	0.002843038382095	0
+bin	0.0031423055802103	0
+bin	0.0034415727783255	0
+bin	0.0037408399764408	0
+bin	0.0040401071745561	0
+bin	0.0043393743726713	1
+bin	0.0046386415707866	0
+bin	0.0049379087689019	0
+bin	0.0052371759670171	0
+bin	0.0055364431651324	0
+bin	0.0058357103632477	0
+bin	0.0061349775613629	0
+bin	0.0064342447594782	0
+bin	0.0067335119575934	0
+statistic car_host_20.hostC8.wlan[0].radio 	packetErrorRate:histogram
+field count 511
+field mean 0.0047721821660197
+field stddev 0.053516379779487
+field sum 2.4385850868361
+field sqrsum 1.4722788536599
+field min 0
+field max 0.88462581325359
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.44231290662679	0
+bin	-0.38333785240989	0
+bin	-0.32436279819298	0
+bin	-0.26538774397608	0
+bin	-0.20641268975917	0
+bin	-0.14743763554226	0
+bin	-0.088462581325359	0
+bin	-0.029487527108453	505
+bin	0.029487527108453	2
+bin	0.088462581325359	1
+bin	0.14743763554226	0
+bin	0.20641268975917	0
+bin	0.26538774397608	0
+bin	0.32436279819298	0
+bin	0.38333785240989	0
+bin	0.44231290662679	0
+bin	0.5012879608437	1
+bin	0.5602630150606	1
+bin	0.61923806927751	0
+bin	0.67821312349442	0
+bin	0.73718817771132	0
+bin	0.79616323192823	0
+bin	0.85513828614513	1
+bin	0.91411334036204	0
+bin	0.97308839457894	0
+bin	1.0320634487959	0
+bin	1.0910385030128	0
+bin	1.1500135572297	0
+bin	1.2089886114466	0
+bin	1.2679636656635	0
+bin	1.3269387198804	0
+statistic car_host_20.hostC8.wlan[0].radio 	minSNIR:histogram
+field count 511
+field mean 13.07394444496
+field stddev 6.3540843907519
+field sum 6680.7856113746
+field sqrsum 107935.15803865
+field min 1.7067987065725
+field max 19.602347093388
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-7.2409754868353	0
+bin	-6.0479389277143	0
+bin	-4.8549023685932	0
+bin	-3.6618658094722	0
+bin	-2.4688292503511	0
+bin	-1.2757926912301	0
+bin	-0.082756132109038	0
+bin	1.110280427012	3
+bin	2.303316986133	3
+bin	3.4963535452541	0
+bin	4.6893901043751	1
+bin	5.8824266634962	253
+bin	7.0754632226172	0
+bin	8.2684997817383	0
+bin	9.4615363408593	1
+bin	10.65457289998	2
+bin	11.847609459101	0
+bin	13.040646018222	1
+bin	14.233682577343	0
+bin	15.426719136465	0
+bin	16.619755695586	0
+bin	17.812792254707	0
+bin	19.005828813828	247
+bin	20.198865372949	0
+bin	21.39190193207	0
+bin	22.584938491191	0
+bin	23.777975050312	0
+bin	24.971011609433	0
+bin	26.164048168554	0
+bin	27.357084727675	0
+bin	28.550121286796	0
+scalar car_host_20.hostC8.wlan[0].radio 	transmissionState:count 	8
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar car_host_20.hostC8.wlan[0].radio 	receptionState:count 	1036
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar car_host_20.hostC8.wlan[0].radio 	radioMode:count 	6
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+scalar car_host_20.hostC9.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar car_host_20.hostC9.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar car_host_20.hostC9.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar car_host_20.hostC9.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar car_host_20.hostC9.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar car_host_20.hostC9.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar car_host_20.hostC9.wlan[0].mac 	numRetry 	0
+scalar car_host_20.hostC9.wlan[0].mac 	numSentWithoutRetry 	0
+scalar car_host_20.hostC9.wlan[0].mac 	numGivenUp 	0
+scalar car_host_20.hostC9.wlan[0].mac 	numCollision 	337
+scalar car_host_20.hostC9.wlan[0].mac 	numSent 	0
+scalar car_host_20.hostC9.wlan[0].mac 	numReceived 	0
+scalar car_host_20.hostC9.wlan[0].mac 	numSentBroadcast 	2
+scalar car_host_20.hostC9.wlan[0].mac 	numReceivedBroadcast 	18
+statistic car_host_20.hostC9.wlan[0].radio 	symbolErrorRate:histogram
+field count 2034
+field mean 5.59456411391e-005
+field stddev 0.00096750336264347
+field sum 0.11379343407693
+field sqrsum 0.0019093818310517
+field min 1.7899645766577e-025
+field max 0.04272091199715
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.021360455998575	0
+bin	-0.018512395198765	0
+bin	-0.015664334398955	0
+bin	-0.012816273599145	0
+bin	-0.0099682127993349	0
+bin	-0.0071201519995249	0
+bin	-0.004272091199715	0
+bin	-0.001424030399905	2022
+bin	0.001424030399905	10
+bin	0.004272091199715	1
+bin	0.0071201519995249	0
+bin	0.0099682127993349	0
+bin	0.012816273599145	0
+bin	0.015664334398955	0
+bin	0.018512395198765	0
+bin	0.021360455998575	0
+bin	0.024208516798385	0
+bin	0.027056577598195	0
+bin	0.029904638398005	0
+bin	0.032752699197815	0
+bin	0.035600759997625	0
+bin	0.038448820797435	0
+bin	0.041296881597245	1
+bin	0.044144942397055	0
+bin	0.046993003196864	0
+bin	0.049841063996674	0
+bin	0.052689124796484	0
+bin	0.055537185596294	0
+bin	0.058385246396104	0
+bin	0.061233307195914	0
+bin	0.064081367995724	0
+statistic car_host_20.hostC9.wlan[0].radio 	bitErrorRate:histogram
+field count 2034
+field mean 5.59456411391e-005
+field stddev 0.00096750336264347
+field sum 0.11379343407693
+field sqrsum 0.0019093818310517
+field min 1.7899645766577e-025
+field max 0.04272091199715
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.021360455998575	0
+bin	-0.018512395198765	0
+bin	-0.015664334398955	0
+bin	-0.012816273599145	0
+bin	-0.0099682127993349	0
+bin	-0.0071201519995249	0
+bin	-0.004272091199715	0
+bin	-0.001424030399905	2022
+bin	0.001424030399905	10
+bin	0.004272091199715	1
+bin	0.0071201519995249	0
+bin	0.0099682127993349	0
+bin	0.012816273599145	0
+bin	0.015664334398955	0
+bin	0.018512395198765	0
+bin	0.021360455998575	0
+bin	0.024208516798385	0
+bin	0.027056577598195	0
+bin	0.029904638398005	0
+bin	0.032752699197815	0
+bin	0.035600759997625	0
+bin	0.038448820797435	0
+bin	0.041296881597245	1
+bin	0.044144942397055	0
+bin	0.046993003196864	0
+bin	0.049841063996674	0
+bin	0.052689124796484	0
+bin	0.055537185596294	0
+bin	0.058385246396104	0
+bin	0.061233307195914	0
+bin	0.064081367995724	0
+statistic car_host_20.hostC9.wlan[0].radio 	packetErrorRate:histogram
+field count 2034
+field mean 0.16215291382017
+field stddev 0.13061193952263
+field sum 329.81902671023
+field sqrsum 88.163036504737
+field min 0
+field max 0.99999999999813
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.49999999999906	0
+bin	-0.43333333333252	0
+bin	-0.36666666666598	0
+bin	-0.29999999999944	0
+bin	-0.2333333333329	0
+bin	-0.16666666666635	0
+bin	-0.099999999999813	0
+bin	-0.033333333333271	272
+bin	0.033333333333271	873
+bin	0.099999999999813	0
+bin	0.16666666666635	0
+bin	0.2333333333329	877
+bin	0.29999999999944	0
+bin	0.36666666666598	0
+bin	0.43333333333252	0
+bin	0.49999999999906	0
+bin	0.5666666666656	1
+bin	0.63333333333215	0
+bin	0.69999999999869	0
+bin	0.76666666666523	1
+bin	0.83333333333177	0
+bin	0.89999999999831	1
+bin	0.96666666666485	9
+bin	1.0333333333314	0
+bin	1.0999999999979	0
+bin	1.1666666666645	0
+bin	1.233333333331	0
+bin	1.2999999999976	0
+bin	1.3666666666641	0
+bin	1.4333333333306	0
+bin	1.4999999999972	0
+statistic car_host_20.hostC9.wlan[0].radio 	minSNIR:histogram
+field count 2034
+field mean 5.4980457482146
+field stddev 3.4090049904762
+field sum 11183.025051868
+field sqrsum 85110.916784614
+field min 0.73955561303231
+field max 26.85798165499
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-12.319657407947	0
+bin	-10.578429005149	0
+bin	-8.8372006023522	0
+bin	-7.095972199555	0
+bin	-5.3547437967578	0
+bin	-3.6135153939606	0
+bin	-1.8722869911635	0
+bin	-0.13105858836628	2
+bin	1.6101698144309	10
+bin	3.3513982172281	1757
+bin	5.0926266200253	6
+bin	6.8338550228225	3
+bin	8.5750834256196	0
+bin	10.316311828417	0
+bin	12.057540231214	0
+bin	13.798768634011	253
+bin	15.539997036808	0
+bin	17.281225439606	2
+bin	19.022453842403	0
+bin	20.7636822452	0
+bin	22.504910647997	0
+bin	24.246139050794	0
+bin	25.987367453591	1
+bin	27.728595856389	0
+bin	29.469824259186	0
+bin	31.211052661983	0
+bin	32.95228106478	0
+bin	34.693509467577	0
+bin	36.434737870375	0
+bin	38.175966273172	0
+bin	39.917194675969	0
+scalar car_host_20.hostC9.wlan[0].radio 	transmissionState:count 	8
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar car_host_20.hostC9.wlan[0].radio 	receptionState:count 	4576
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar car_host_20.hostC9.wlan[0].radio 	radioMode:count 	6
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"

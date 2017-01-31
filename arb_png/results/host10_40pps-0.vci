@@ -1,0 +1,276 @@
+file 784554 1478531355                                          
+version 2
+run host10_40pps-0-20161107-20:38:02-9548
+attr configname host10_40pps
+attr datetime 20161107-20:38:02
+attr experiment host10_40pps
+attr inifile omnetpp_10.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network arb_png.car_host_10
+attr processid 9548
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.aodv.activeRouteTimeout 2s
+param *.configurator.addStaticRoutes false
+param *.configurator.config "xml(\"<config><interface hosts='**' address='10.0.0.x' netmask='255.255.255.0'/><autoroute metric='errorRate'/></config>\")"
+param *.configurator.optimizeRoutes true
+param *.host*.**.bitrate 1Mbps
+param *.host*.networkLayer.arpType "\"GlobalARP\""
+param *.host*.routingTable.netmaskRoutes "\"\""
+param *.host*.wlan[0].mac.maxQueueSize 15
+param *.host*.wlan[0].mac.useAck false
+param *.host*.wlan[0].macType "\"CsmaCaMac\""
+param *.host*.wlan[0].radio.bandwidth 2MHz
+param *.host*.wlan[0].radio.carrierFrequency 2GHz
+param *.host*.wlan[0].radio.displayCommunicationRange true
+param *.host*.wlan[0].radio.displayInterferenceRange true
+param *.host*.wlan[0].radio.receiver.energyDetection -85dBm
+param *.host*.wlan[0].radio.receiver.ignoreInterference false
+param *.host*.wlan[0].radio.receiver.sensitivity -85dBm
+param *.host*.wlan[0].radio.receiver.snirThreshold 4dB
+param *.host*.wlan[0].radio.transmitter.communicationRange 200m
+param *.host*.wlan[0].radio.transmitter.headerBitLength 0b
+param *.host*.wlan[0].radio.transmitter.power 1.4mW
+param *.host*.wlan[0].radio.transmitter.preambleDuration 10us
+param *.host*.wlan[0].radioType "\"APSKScalarRadio\""
+param *.host*.wlan[0].typename "\"WirelessNic\""
+param *.hostA.numUdpApps 1
+param *.hostA.udpApp[0].destAddresses "\"hostD\""
+param *.hostA.udpApp[0].destPort 5000
+param *.hostA.udpApp[0].messageLength 1000B
+param *.hostA.udpApp[0].packetName "\"Data\""
+param *.hostA.udpApp[0].sendInterval 25ms
+param *.hostA.udpApp[0].typename "\"UDPBasicApp\""
+param *.hostD.numUdpApps 1
+param *.hostD.udpApp[0].localPort 5000
+param *.hostD.udpApp[0].typename "\"UDPSink\""
+param *.hostType "\"AODVRouter\""
+param *.mediumType "\"APSKScalarRadioMedium\""
+param *.radioMedium.backgroundNoise.power -90dBm
+param *.radioMedium.mediumLimitCache.carrierFrequency 2GHz
+param *.visualizer.dataLinkVisualizer.packetNameFilter "\"AODV*\""
+param *.visualizer.mediumVisualizer.signalPropagationUpdateInterval 100ns
+param *.visualizer.mobilityVisualizer.displayMovementTrail true
+param *.visualizer.networkRouteVisualizer.packetNameFilter "\"UDPData*\""
+param *.visualizer.sceneVisualizer.descriptionFigure "\"title\""
+
+vector 190  car_host_10.hostA.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 204  car_host_10.hostD.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 210  car_host_10.hostB.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 216  car_host_10.hostC.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 222  car_host_10.hostB1.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 228  car_host_10.hostB2.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 234  car_host_10.hostB3.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 240  car_host_10.hostB4.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 246  car_host_10.hostC1.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 252  car_host_10.hostC2.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 258  car_host_10.hostC3.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 264  car_host_10.hostC4.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 191  car_host_10.hostA.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 205  car_host_10.hostD.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 211  car_host_10.hostB.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 217  car_host_10.hostC.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 223  car_host_10.hostB1.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 229  car_host_10.hostB2.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 235  car_host_10.hostB3.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 241  car_host_10.hostB4.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 247  car_host_10.hostC1.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 253  car_host_10.hostC2.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 259  car_host_10.hostC3.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 265  car_host_10.hostC4.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 179  car_host_10.hostA.udpApp[0]  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 182  car_host_10.hostA.udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 192  car_host_10.hostA.wlan[0].radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 236  car_host_10.hostB3.wlan[0].radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 224  car_host_10.hostB1.wlan[0].radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 242  car_host_10.hostB4.wlan[0].radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 230  car_host_10.hostB2.wlan[0].radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 212  car_host_10.hostB.wlan[0].radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 218  car_host_10.hostC.wlan[0].radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 206  car_host_10.hostD.wlan[0].radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 260  car_host_10.hostC3.wlan[0].radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 254  car_host_10.hostC2.wlan[0].radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 266  car_host_10.hostC4.wlan[0].radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 248  car_host_10.hostC1.wlan[0].radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 197  car_host_10.hostD.udp  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 198  car_host_10.hostD.udp  passedUpPk:vector(count)  ETV
+attr interpolationmode  none
+attr title  "packets passed up, vector(count)"
+vector 193  car_host_10.hostD.udpApp[0]  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 194  car_host_10.hostD.udpApp[0]  endToEndDelay:vector  ETV
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, vector"
+attr unit  s
+vector 195  car_host_10.hostD.udpApp[0]  rcvdPkSeqNo:vector  ETV
+attr interpolationmode  none
+attr source  appPkSeqNo(rcvdPk)
+attr title  "received packet sequence number, vector"
+179	10672 17468 42 51439 0.025 20.35 814 1000 1000 814000 814000000
+182	28140 17468 44 51440 0.025 20.35 814 1008 1008 820512 827076096
+190	45608 34018 0 51475 0 20.358298 1550 0 3 3872 10066
+191	79626 46179 0 51475 0 20.358298 1980 0 3 1637 2929
+192	125805 67992 48 51475 0.026001753887 20.358298 3096 0 2 3096 4644
+193	193797 4172 2306 51311 1.534435122288 20.292353073173 133 1000 1000 133000 133000000
+194	197969 5501 2306 51311 1.534435122288 20.292353073173 133 0.041973073173 1.484435122288 9.891747869465 6.109132830535
+195	203470 4029 2306 51311 1.534435122288 20.292353073173 133 1 809 57269 31438015
+197	207499 4172 2305 51310 1.534435122288 20.292353073173 133 1008 1008 134064 135136512
+198	211671 3931 2305 51310 1.534435122288 20.292353073173 133 1 133 8911 793079
+204	215602 182 0 1703 0 1.475488146931 8 0 3 17 43
+205	215784 8199 0 51307 0 20.292353073173 291 0 3 571 1419
+206	223983 320 562 1703 0.357529347848 1.475488146931 12 0 2 12 18
+210	224303 179 0 1554 0 1.470783043418 8 0 3 17 43
+211	224482 41902 0 51457 0 20.350455765553 1482 0 3 2816 6688
+212	266384 314 467 1554 0.355153019051 1.470783043418 12 0 2 12 18
+216	266698 182 0 1848 0 1.479139836799 8 0 3 17 43
+217	266880 29532 0 51469 0 20.35045628275 1058 0 3 1900 4226
+218	296412 320 515 1848 0.356858542524 1.479139836799 12 0 2 12 18
+222	296732 228 0 1555 0 1.47078314291 10 0 3 22 56
+223	296960 63109 0 51459 0 20.350455865045 2229 0 3 4446 10898
+224	360069 412 129 1555 0.030668194923 1.47078314291 16 0 2 16 24
+228	360481 11702 0 51456 0 20.350455422768 414 0 3 1032 2682
+229	372183 34519 0 51456 0 20.350455422768 1222 0 3 1814 4196
+230	406702 23360 379 51456 0.353811883489 20.350455422768 824 0 2 824 1236
+234	430062 11752 0 51405 0 20.341896809546 416 0 3 1037 2695
+235	441814 62827 0 51463 0 20.35045603599 2233 0 3 3845 9091
+236	504641 23460 84 51405 0.029379960247 20.341896809546 828 0 2 828 1242
+240	528101 232 0 1439 0 1.469482037396 10 0 3 22 56
+241	528333 62502 0 51476 0 20.358298392435 2207 0 3 4402 10810
+242	590835 420 171 1439 0.031785238036 1.469482037396 16 0 2 16 24
+246	591255 7474 0 51302 0 20.29235256004 274 0 3 682 1772
+247	598729 28326 0 51472 0 20.350456558749 1022 0 3 1445 2929
+248	627055 14904 1202 51302 0.839928142887 20.29235256004 544 0 2 544 816
+252	641959 180 0 1556 0 1.470783362229 8 0 3 17 43
+253	642139 41549 0 51465 0 20.350456084364 1468 0 3 2926 7308
+254	683688 316 626 1556 0.358644213126 1.470783362229 12 0 2 12 18
+258	684004 9884 0 51268 0 20.283993946047 350 0 3 872 2266
+259	693888 41697 0 51461 0 20.350455946047 1474 0 3 2215 4749
+260	735585 19724 575 51268 0.357533777034 20.283993946047 696 0 2 696 1044
+264	755309 128 0 1774 0 1.47735074894 6 0 3 12 30
+265	755437 28905 0 51471 0 20.350456552065 1022 0 3 1847 4135
+266	784342 212 1161 1774 0.839117650084 1.47735074894 8 0 2 8 12
